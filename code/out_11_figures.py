@@ -1,6 +1,13 @@
 """
-11_figures.py (v1.1) -- the three data-dependent figures for Paper 1
+11_figures.py (v1.7) -- the three data-dependent figures for Paper 1
 ==============================================================================
+v1.7 (12 Aug 2026): earth/WUR palette replaces Okabe-Ito, validated for
+    protan/deutan/tritan separation (OKLab, all pairs, white surface).
+    KOR path is the Papale/Hampel-cleaned CSV. Regenerate ALL figures so the
+    Cheorwon panels stop showing the uncleaned record: the old Figure 4
+    annotated n=8,365 where the cleaned analysis set has 8,364 complete
+    cases (tab:sites footnote b).
+
 Regenerates, from the August 2026 runs and at the equations' PUBLISHED
 coefficients (no refitting):
 
@@ -51,9 +58,16 @@ BASE = r"C:\Users\zerru001\OneDrive - Wageningen University & Research\Paper1\RU
 PYSR_ROOT = r"C:\Users\zerru001\OneDrive - Wageningen University & Research\Paper1\RUN2\PYSR"
 OUT = r"C:\Users\zerru001\OneDrive - Wageningen University & Research\Paper1\RUN2\FIGS"
 
-# Okabe-Ito, colourblind-safe
-COLOR = {"MASE": "#0072B2", "CHEORWON": "#D55E00",
-         "IRRI": "#009E73", "POOLED": "#CC79A7"}
+# Earth/WUR palette (v1.7), colourblind-aware. Validated all-pairs in OKLab
+# against protanopia/deuteranopia/tritanopia on a white surface; arm colours
+# are never co-plotted in one panel and every panel is title-labelled, so
+# identity never rests on colour alone. POOLED wears the WUR green family:
+# the exact brand green #34B233 sits at DeltaE 3.2 from the turmeric under
+# protanopia, so the validated darker step #279027 is used instead.
+COLOR = {"MASE": "#0C7CA0",      # deep lake teal -- continuous flooding
+         "CHEORWON": "#96421F",  # terracotta    -- intermittent flooding
+         "IRRI": "#C99700",      # turmeric      -- AWD dry season
+         "POOLED": "#279027"}    # WUR green     -- the pooled equation
 GREY = "#9a9a9a"
 
 
