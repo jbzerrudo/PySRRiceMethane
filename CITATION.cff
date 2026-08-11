@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this code or data, please cite the paper and this repository."
 title: "PySRRiceMethane: symbolic regression pipeline for rice-paddy CH4 flux equations"
 version: "1.0.0"
-date-released: "2026-08-12"
+date-released: "2026-08-11"
 repository-code: "https://github.com/jbzerrudo/PySRRiceMethane"
 license: MIT
 authors:
@@ -24,7 +24,7 @@ authors:
     affiliation: "International Rice Research Institute"
   - family-names: Saludes
     given-names: Ronaldo
-    affiliation: "University of the Philippines Los Banos"
+    affiliation: "University of the Philippines Los Baños"
   - family-names: Dorado
     given-names: Moises
     affiliation: "University of the Philippines Los Banos"
