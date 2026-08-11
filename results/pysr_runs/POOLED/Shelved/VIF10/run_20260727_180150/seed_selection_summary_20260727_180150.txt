@@ -1,0 +1,21 @@
+Multi-seed selection summary (Rule A only)
+Run timestamp: 20260727_180150
+Seeds run: [42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53]
+
+   seed     max(R²)  notes
+  -----  ----------  ------------------------------
+     42     +0.5554  
+     43     +0.5552  
+     44     +0.4568  
+     45     +0.4894  
+     46     +0.6000  
+     47     +0.5949  
+     48     +0.5336  
+     49     +0.5309  
+     50     +0.6111  
+     51     +0.4770  
+     52     +0.6432    <-- Rule A winner
+     53     +0.4951  
+
+Rule A: pick run whose single highest-R² candidate is highest across runs.
+Selected seed for Stage 8: 52

@@ -1,5 +1,12 @@
-data/
-*.zip
-*.csv
 __pycache__/
+*.pkl
 *.pyc
+# raw FLUXNET downloads: cite the DOIs, do not re-host
+FLUXNET/
+# IRRI-derived tables are available on reasonable request, not published
+data/PHL/
+data/POOLED/
+CSV/PHL/
+CSV/POOLED/
+Thumbs.db
+desktop.ini

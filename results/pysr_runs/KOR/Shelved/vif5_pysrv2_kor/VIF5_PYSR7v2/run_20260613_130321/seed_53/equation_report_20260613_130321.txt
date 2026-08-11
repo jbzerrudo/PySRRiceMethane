@@ -1,0 +1,227 @@
+==========================================================================================
+SYMBOLIC REGRESSION - EQUATION DISCOVERY REPORT (v4)
+Generated: 2026-06-13 15:43:57
+Target: F_CH4_F
+Predictors: dayhr, SR, WD, h*Pr, h*VPD, SR*v, q*WS, asinh_Ta
+PySR iterations: 2000, Max complexity: 35
+Nested constraints: {'exp': {'exp': 1, 'log': 0}, 'log': {'log': 0, 'exp': 1}, 'tanh': {'tanh': 0}}
+Arg complexity constraints: {'exp': 8, 'log': 8, 'tanh': 8, 'sqrt': 10, '+': (-1, -1), '-': (-1, -1), '*': (-1, -1), '/': (-1, -1)}
+==========================================================================================
+
+VARIABLE MAPPING
+----------------------------------------
+  x0  =  dayhr
+  x1  =  SR
+  x2  =  WD
+  x3  =  h*Pr
+  x4  =  h*VPD
+  x5  =  SR*v
+  x6  =  q*WS
+  x7  =  asinh_Ta
+
+PARETO FRONT (ranked by complexity)
+------------------------------------------------------------------------------------------
+
+  Equation #0  [complexity = 1]
+    MSE   : 81.5173
+    Score : 0.000000
+    CH4 = 5.6117525
+
+  Equation #1  [complexity = 3]
+    MSE   : 67.9091
+    Score : 0.091322
+    CH4 = sqrt(exp(asinh_Ta))
+
+  Equation #2  [complexity = 4]
+    MSE   : 58.5661
+    Score : 0.148015
+    CH4 = exp(asinh_Ta + -1.5814463)
+
+  Equation #3  [complexity = 5]
+    MSE   : 48.9991
+    Score : 0.178354
+    CH4 = exp(exp(asinh_Ta + -3.0256674))
+
+  Equation #4  [complexity = 6]
+    MSE   : 48.0662
+    Score : 0.019223
+    CH4 = exp((asinh_Ta * 3.0898795) + -9.671598)
+
+  Equation #5  [complexity = 7]
+    MSE   : 47.8519
+    Score : 0.004467
+    CH4 = exp(exp(asinh_Ta + -2.8031821) - 0.6647779)
+
+  Equation #6  [complexity = 8]
+    MSE   : 47.6048
+    Score : 0.005178
+    CH4 = exp(exp(asinh_Ta + -2.9875631)) - exp(h*VPD)
+
+  Equation #7  [complexity = 9]
+    MSE   : 46.9094
+    Score : 0.014716
+    CH4 = exp(exp(asinh_Ta + -2.9741185)) - (dayhr * 0.13800655)
+
+  Equation #8  [complexity = 11]
+    MSE   : 46.6134
+    Score : 0.003165
+    CH4 = (exp(exp(asinh_Ta + -2.970967)) - h*VPD) + (dayhr * -0.13300592)
+
+  Equation #9  [complexity = 12]
+    MSE   : 46.3229
+    Score : 0.006251
+    CH4 = exp(exp(asinh_Ta + -2.9308414)) - (dayhr * exp(asinh_Ta + -5.2033677))
+
+  Equation #10  [complexity = 13]
+    MSE   : 46.2970
+    Score : 0.000558
+    CH4 = exp(exp(asinh_Ta + -2.9648144)) - (((dayhr * 0.03582142) + h*VPD) / 0.2975599)
+
+  Equation #11  [complexity = 14]
+    MSE   : 46.0895
+    Score : 0.004494
+    CH4 = exp(exp(asinh_Ta + -2.9370058)) - ((dayhr * exp(asinh_Ta + -5.2422304)) + h*VPD)
+
+  Equation #12  [complexity = 16]
+    MSE   : 45.9847
+    Score : 0.001138
+    CH4 = exp(exp(asinh_Ta + -2.9370058)) - (((exp(asinh_Ta + -5.2422304) * dayhr) + h*VPD) + h*VPD)
+
+  Equation #13  [complexity = 17]
+    MSE   : 45.8344
+    Score : 0.003273
+    CH4 = (exp((asinh_Ta * 3.5796149) + -11.756015) - tanh(dayhr - (asinh_Ta * asinh_Ta))) + (1.3316132 - h*VPD)
+
+  Equation #14  [complexity = 18]
+    MSE   : 45.5608
+    Score : 0.005988
+    CH4 = (exp((asinh_Ta * 3.3765855) + -10.853422) - tanh(SR*v + -23.300596)) - tanh(dayhr - (asinh_Ta * asinh_Ta))
+
+  Equation #15  [complexity = 20]
+    MSE   : 45.3081
+    Score : 0.002781
+    CH4 = ((exp((asinh_Ta * 3.3765855) + -10.853422) - tanh(SR*v + -23.300596)) - tanh(dayhr - (asinh_Ta * asinh_Ta))) - h*VPD
+
+  Equation #16  [complexity = 22]
+    MSE   : 45.1519
+    Score : 0.001726
+    CH4 = (((exp((asinh_Ta * 3.3567126) + -10.75039) - tanh(dayhr - (asinh_Ta * asinh_Ta))) - tanh(-22.961872 + SR*v)) - h*VPD) - h*VPD
+
+  Equation #17  [complexity = 23]
+    MSE   : 45.1234
+    Score : 0.000633
+    CH4 = ((exp((asinh_Ta * 3.4752855) + -11.214016) - tanh(dayhr - (asinh_Ta * asinh_Ta))) - (asinh_Ta * tanh(h*VPD))) - tanh(SR*v + -22.858845)
+
+  Equation #18  [complexity = 24]
+    MSE   : 45.0323
+    Score : 0.002021
+    CH4 = (((exp((asinh_Ta * 3.4726777) + -11.21471) - tanh(dayhr - (asinh_Ta * asinh_Ta))) - tanh(-22.916155 + SR*v)) - (h*VPD / 0.36514828)) - -0.34451285
+
+  Equation #19  [complexity = 25]
+    MSE   : 44.9784
+    Score : 0.001197
+    CH4 = ((exp((asinh_Ta * 3.4726777) + -11.21471) + 0.48780492) - (tanh(dayhr - (asinh_Ta * asinh_Ta)) - (tanh(h*VPD) * -4.1181808))) - tanh(SR*v + -22.626324)
+
+  Equation #20  [complexity = 26]
+    MSE   : 44.9781
+    Score : 0.000005
+    CH4 = exp((asinh_Ta * 3.4726777) + -11.21471) + ((0.48780492 - (tanh(dayhr - (asinh_Ta * sqrt(dayhr))) - (tanh(h*VPD) * -4.1181808))) - tanh(SR*v + -22.626324))
+
+  Equation #21  [complexity = 27]
+    MSE   : 44.9404
+    Score : 0.000840
+    CH4 = ((exp((asinh_Ta * 3.4726777) + -11.21471) - (tanh(dayhr - (asinh_Ta * asinh_Ta)) - (tanh(h*VPD + q*WS) * -4.1181808))) + 0.49471557) - tanh(SR*v + -22.626324)
+
+  Equation #22  [complexity = 28]
+    MSE   : 44.8509
+    Score : 0.001993
+    CH4 = (((((h*Pr + -8.094835) * h*VPD) + exp((asinh_Ta * 3.5444229) + -11.490904)) - tanh((asinh_Ta * -5.8544188) + (dayhr + 8.573624))) - -0.56627053) - tanh(SR*v - 17.147247)
+
+  Equation #23  [complexity = 31]
+    MSE   : 44.8198
+    Score : 0.000231
+    CH4 = ((((exp((asinh_Ta * 3.4726777) + -11.21471) - ((tanh(dayhr - (asinh_Ta * asinh_Ta)) + -0.48831186) / 0.7683386)) - tanh(dayhr * h*VPD)) - tanh(SR*v + -22.916155)) - h*VPD) - h*VPD
+
+  Equation #24  [complexity = 32]
+    MSE   : 44.7993
+    Score : 0.000459
+    CH4 = ((((exp((asinh_Ta * 3.4726777) + -11.21471) - ((tanh(dayhr - (asinh_Ta * asinh_Ta)) + -0.48831186) / 0.75000626)) - tanh(sqrt(WD) * h*VPD)) - tanh(SR*v + -22.916155)) - h*VPD) - h*VPD
+
+  Equation #25  [complexity = 33]
+    MSE   : 44.5726
+    Score : 0.005073
+    CH4 = (((sqrt(SR * q*WS) + (h*Pr + -11.065314)) * h*VPD) + ((exp((asinh_Ta * 3.4226427) + -11.065314) - -0.7998568) - tanh((dayhr + 8.540131) + (asinh_Ta * -5.842194)))) - tanh(SR*v - 34.6153)
+
+  Equation #26  [complexity = 35]
+    MSE   : 44.5658
+    Score : 0.000076
+    CH4 = ((((sqrt(SR * q*WS) + (h*Pr + -11.490904)) * h*VPD) - tanh(8.573624 + ((asinh_Ta * -5.8544188) + dayhr))) - -0.95743734) + ((exp(-11.490904 + (asinh_Ta * 3.5444229)) - tanh(-10.419431 + SR*v)) * 0.9472162)
+
+
+==========================================================================================
+CANDIDATE EQUATIONS - DETAILED COMPARISON
+==========================================================================================
+
+     #  Label                           Cmplx       R²      RMSE       MAE   NaN
+  ----  ------------------------------  -----  -------  --------  --------  ----
+  #3    Auto-best (highest score)           5    0.430      7.39      4.24     0
+  #4    Near-knee candidate                 6    0.433      7.36      4.07     0
+  #26   Best accuracy (most complex)       35    0.467      7.14      3.85     0
+  #15   Mid-complexity candidate           20    0.465      7.15      3.87     0
+
+
+  --- Equation #3 (Auto-best (highest score)) ---
+  Complexity : 5
+  R²         : 0.4298
+  RMSE       : 7.3865 mg CH4/m2/h
+  MAE        : 4.2410 mg CH4/m2/h
+  Equation   :
+    CH4 = exp(exp(asinh_Ta + -3.0256674))
+
+  --- Equation #4 (Near-knee candidate) ---
+  Complexity : 6
+  R²         : 0.4332
+  RMSE       : 7.3646 mg CH4/m2/h
+  MAE        : 4.0693 mg CH4/m2/h
+  Equation   :
+    CH4 = exp((asinh_Ta * 3.0898795) + -9.671598)
+
+  --- Equation #26 (Best accuracy (most complex)) ---
+  Complexity : 35
+  R²         : 0.4673
+  RMSE       : 7.1393 mg CH4/m2/h
+  MAE        : 3.8506 mg CH4/m2/h
+  Equation   :
+    CH4 = ((((sqrt(SR * q*WS) + (h*Pr + -11.490904)) * h*VPD) - tanh(8.573624 + ((asinh_Ta * -5.8544188) + dayhr))) - -0.95743734) + ((exp(-11.490904 + (asinh_Ta * 3.5444229)) - tanh(-10.419431 + SR*v)) * 0.9472162)
+
+  --- Equation #15 (Mid-complexity candidate) ---
+  Complexity : 20
+  R²         : 0.4655
+  RMSE       : 7.1517 mg CH4/m2/h
+  MAE        : 3.8655 mg CH4/m2/h
+  Equation   :
+    CH4 = ((exp((asinh_Ta * 3.3765855) + -10.853422) - tanh(SR*v + -23.300596)) - tanh(dayhr - (asinh_Ta * asinh_Ta))) - h*VPD
+
+
+==========================================================================================
+ORYZA INTEGRATION NOTES
+==========================================================================================
+
+Variable mapping (ECS measurement -> ORYZA equivalent):
+
+  dayhr                -> Derive from ORYZA state or weather input
+  SR                   -> Weather input file (RDD)
+  WD                   -> Derive from ORYZA state or weather input
+  h*Pr                 -> Derive from ORYZA state or weather input
+  h*VPD                -> ORYZA depth x VPD
+  SR*v                 -> Derive from ORYZA state or weather input
+  q*WS                 -> Derive from ORYZA state or weather input
+  asinh_Ta             -> Derive from ORYZA state or weather input
+
+
+To embed in ORYZA:
+  1. Choose candidate equation balancing accuracy and simplicity
+  2. Replace variables with ORYZA equivalents above
+  3. Code into ORYZA simulation loop
+  4. Compute CH4 flux at each timestep
+  5. Validate against EC station observations

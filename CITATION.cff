@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper and this repository."
+title: "PySRRiceMethane: symbolic regression pipeline for rice-paddy CH4 flux equations"
+version: "1.0.0"
+date-released: "2026-08-12"
+repository-code: "https://github.com/jbzerrudo/PySRRiceMethane"
+license: MIT
+authors:
+  - family-names: Zerrudo
+    given-names: Jef
+    affiliation: "Wageningen University & Research; DOST-PAGASA"
+    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+  - family-names: Bataille
+    given-names: Laurent
+    affiliation: "Wageningen University & Research"
+  - family-names: Hutjes
+    given-names: Ronald W. A.
+    affiliation: "Wageningen University & Research"
+  - family-names: Kruijt
+    given-names: Bart
+    affiliation: "Wageningen University & Research"
+  - family-names: Sander
+    given-names: Bjoern Ole
+    affiliation: "International Rice Research Institute"
+  - family-names: Saludes
+    given-names: Ronaldo
+    affiliation: "University of the Philippines Los Banos"
+  - family-names: Dorado
+    given-names: Moises
+    affiliation: "University of the Philippines Los Banos"
+  - family-names: Sta Cruz
+    given-names: Pompe
+    affiliation: "formerly University of the Philippines Los Banos"
+  - family-names: Centeno
+    given-names: Caesar Arloo
+    affiliation: "International Rice Research Institute"

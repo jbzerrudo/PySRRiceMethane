@@ -1,0 +1,27 @@
+Cross-seed form recurrence
+Run timestamp: 20260805_170113
+Threshold: MIN_RECURRENCE_RUNS = 6
+
+  12 seeds, 347 equations, 217 distinct forms
+  promotion threshold: present in >= 6 of 12 seeds
+
+  cplx   seeds   best loss   form
+  ---- ------- -----------   ----------------------------------------------------
+     1  12/12      56.0154   C
+     2  12/12      52.6181   log(AUC_wet)
+     3  12/12      36.9178   C + Tv_C
+     4  12/12      28.1334   exp(C*Tv_C)
+     5  12/12      27.6532   C*exp(Tv_C**C)
+     6  12/12      27.2055   C*exp(C*Tv_C)
+     7   9/12      26.5597   C*v_STAR_VPD + C*exp(Tv_C**C)
+     8  11/12      26.1450   C*dayhr + exp(C*Tv_C)
+     9   9/12      25.8672   C*dayhr + C*v_STAR_VPD + C*exp(Tv_C**C)
+    12   7/12      24.8061   C*dayhr + exp(C*SR_STAR_v)*exp(C*Tv_C)
+
+  merged front: 10 recurring forms, complexity 1 to 12
+
+Every fitted constant is replaced by one placeholder before
+counting, so seeds that find the same structure with different
+constants are counted together. A single placeholder cannot tell
+WHERE a constant sits, so one algebraic family can appear on two
+lines; counts are a lower bound.

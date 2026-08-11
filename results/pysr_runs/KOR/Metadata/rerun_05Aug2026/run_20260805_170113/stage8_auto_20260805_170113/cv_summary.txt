@@ -1,0 +1,29 @@
+8-form Day-Grouped CV (auto-generated, v6 diagnostics)
+======================================================================
+  simple_ruleA        mean RMSE = 6.031 ± 0.255
+  knee_ruleA          mean RMSE = 5.292 ± 0.138
+  complex_ruleA       mean RMSE = 4.677 ± 0.453
+  best_accuracy_ruleA mean RMSE = 4.478 ± 0.400
+  best_accuracy_recur mean RMSE = 5.003 ± 0.184
+  complex_recur       mean RMSE = 5.207 ± 0.194
+  knee_recur          mean RMSE = 5.292 ± 0.138
+  simple_recur        mean RMSE = 6.031 ± 0.255
+
+  simple_ruleA        mean R²   = +0.370 ± 0.108
+  knee_ruleA          mean R²   = +0.516 ± 0.068
+  complex_ruleA       mean R²   = +0.622 ± 0.076
+  best_accuracy_ruleA mean R²   = +0.654 ± 0.066
+  best_accuracy_recur mean R²   = +0.569 ± 0.054
+  complex_recur       mean R²   = +0.532 ± 0.068
+  knee_recur          mean R²   = +0.516 ± 0.068
+  simple_recur        mean R²   = +0.370 ± 0.108
+
+No-refit baseline R² (warm-start p0 used directly, no curve_fit per fold):
+  simple_ruleA        mean R²nf  = +0.376 ± 0.103
+  knee_ruleA          mean R²nf  = +0.521 ± 0.062
+  complex_ruleA       mean R²nf  = +0.626 ± 0.079
+  best_accuracy_ruleA mean R²nf  = +0.665 ± 0.067
+  best_accuracy_recur mean R²nf  = +0.575 ± 0.052
+  complex_recur       mean R²nf  = +0.537 ± 0.063
+  knee_recur          mean R²nf  = +0.521 ± 0.062
+  simple_recur        mean R²nf  = +0.376 ± 0.103

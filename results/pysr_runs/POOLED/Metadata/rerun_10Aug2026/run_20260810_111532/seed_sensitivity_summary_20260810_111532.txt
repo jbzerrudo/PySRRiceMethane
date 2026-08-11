@@ -1,0 +1,14 @@
+Cross-seed sensitivity summary
+Run timestamp: 20260810_111532
+Per-category R² (80/20 hold-out) across 12 seeds.
+
+  category                          n       mean      std      min      max
+  Auto-best (highest score)         12   +0.4278  +0.0558  +0.3232  +0.5053
+  Near-knee candidate               8   +0.4513  +0.0060  +0.4389  +0.4598
+  Best accuracy (most complex)      12   +0.5964  +0.0228  +0.5507  +0.6386
+  Mid-complexity candidate          12   +0.5755  +0.0194  +0.5201  +0.5967
+  Knee of Pareto front              4   +0.5255  +0.0005  +0.5251  +0.5262
+
+Note: equations do not average. These statistics summarize PySR's seed-to-seed variability for the
+methods section. Selection (Rule A) drives Stage 8; these means do NOT determine which equations are
+validated by day-grouped CV.

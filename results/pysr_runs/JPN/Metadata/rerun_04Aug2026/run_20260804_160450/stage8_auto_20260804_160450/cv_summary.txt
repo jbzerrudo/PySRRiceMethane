@@ -1,0 +1,14 @@
+3-form Day-Grouped CV (auto-generated, v6 diagnostics)
+======================================================================
+  best_accuracy_recur mean RMSE = 3.621 ± 2.087
+  knee_recur          mean RMSE = 3.581 ± 2.358
+  simple_recur        mean RMSE = 3.750 ± 2.436
+
+  best_accuracy_recur mean R²   = +0.392 ± 0.225
+  knee_recur          mean R²   = +0.467 ± 0.168
+  simple_recur        mean R²   = +0.418 ± 0.170
+
+No-refit baseline R² (warm-start p0 used directly, no curve_fit per fold):
+  best_accuracy_recur mean R²nf  = +0.490 ± 0.151
+  knee_recur          mean R²nf  = +0.484 ± 0.177
+  simple_recur        mean R²nf  = +0.429 ± 0.179

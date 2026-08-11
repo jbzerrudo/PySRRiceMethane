@@ -1,0 +1,264 @@
+==========================================================================================
+SYMBOLIC REGRESSION - EQUATION DISCOVERY REPORT (v4)
+Generated: 2026-08-10 12:14:29
+Target: F_CH4_F
+Predictors: dayhr, depth, Tv_C, SR*u, SR*v, VPD*WS, h_inv, u*VPD, SR*Ta, SR*HODsin, h*sinTOD, h*cosTOD, h*v, hbar_wet
+PySR iterations: 2000, Max complexity: 40
+Nested constraints: {'exp': {'exp': 0, 'log': 0}, 'log': {'log': 0, 'exp': 1}}
+Arg complexity constraints: {'exp': 8, 'log': 8, 'sqrt': 10, '+': (-1, -1), '-': (-1, -1), '*': (-1, -1), '/': (-1, -1)}
+==========================================================================================
+
+VARIABLE MAPPING
+----------------------------------------
+  x0  =  dayhr
+  x1  =  depth
+  x2  =  Tv_C
+  x3  =  SR*u
+  x4  =  SR*v
+  x5  =  VPD*WS
+  x6  =  h_inv
+  x7  =  u*VPD
+  x8  =  SR*Ta
+  x9  =  SR*HODsin
+  x10  =  h*sinTOD
+  x11  =  h*cosTOD
+  x12  =  h*v
+  x13  =  hbar_wet
+
+PARETO FRONT (ranked by complexity)
+------------------------------------------------------------------------------------------
+
+  Equation #0  [complexity = 1]
+    MSE   : 47.4685
+    Score : 0.000000
+    CH4 = 5.321046
+
+  Equation #1  [complexity = 2]
+    MSE   : 44.4913
+    Score : 0.064773
+    CH4 = sqrt(Tv_C)
+
+  Equation #2  [complexity = 3]
+    MSE   : 41.6589
+    Score : 0.065777
+    CH4 = Tv_C * 0.23009902
+
+  Equation #3  [complexity = 4]
+    MSE   : 38.7601
+    Score : 0.072126
+    CH4 = exp(Tv_C * 0.06824568)
+
+  Equation #4  [complexity = 5]
+    MSE   : 33.1920
+    Score : 0.155083
+    CH4 = (hbar_wet * 0.08883655) * Tv_C
+
+  Equation #5  [complexity = 6]
+    MSE   : 25.8903
+    Score : 0.248439
+    CH4 = hbar_wet / log(42.13077 / Tv_C)
+
+  Equation #6  [complexity = 7]
+    MSE   : 25.4025
+    Score : 0.019021
+    CH4 = hbar_wet / ((34.291985 / Tv_C) + -0.8011351)
+
+  Equation #7  [complexity = 9]
+    MSE   : 25.1906
+    Score : 0.004188
+    CH4 = (hbar_wet + -0.39742818) / ((30.548344 / Tv_C) + -0.71804)
+
+  Equation #8  [complexity = 10]
+    MSE   : 25.0736
+    Score : 0.004658
+    CH4 = ((h*v * -0.038404837) + hbar_wet) / log(42.088593 / Tv_C)
+
+  Equation #9  [complexity = 11]
+    MSE   : 23.8887
+    Score : 0.048407
+    CH4 = (hbar_wet / ((37.47896 / Tv_C) + -0.88651985)) + (h_inv * 0.003428794)
+
+  Equation #10  [complexity = 12]
+    MSE   : 23.6793
+    Score : 0.008804
+    CH4 = (((exp(Tv_C * 0.13702884) / 0.027618226) + h_inv) * hbar_wet) * 0.0012807995
+
+  Equation #11  [complexity = 13]
+    MSE   : 23.6376
+    Score : 0.001763
+    CH4 = (hbar_wet / ((33.032326 / Tv_C) + -0.77009434)) + ((h_inv * 0.0035600148) + -0.87277263)
+
+  Equation #12  [complexity = 14]
+    MSE   : 22.7446
+    Score : 0.038511
+    CH4 = (hbar_wet * ((h_inv * 0.056203883) + exp(Tv_C * 0.15525454))) / (h*v + 38.98314)
+
+  Equation #13  [complexity = 16]
+    MSE   : 22.4331
+    Score : 0.006895
+    CH4 = ((h_inv * 0.02573149) + exp(Tv_C * 0.13553436)) * (hbar_wet / ((h*v * 0.45968673) + 20.283047))
+
+  Equation #14  [complexity = 17]
+    MSE   : 22.3197
+    Score : 0.005067
+    CH4 = ((h_inv + (exp(Tv_C * 0.13715817) / exp((h*v * 0.026113266) + -3.6689653))) * hbar_wet) * 0.001214528
+
+  Equation #15  [complexity = 18]
+    MSE   : 22.2217
+    Score : 0.004399
+    CH4 = (hbar_wet * ((h_inv * 0.023479646) + (h*sinTOD + exp(Tv_C * 0.13444982)))) / ((h*v * 0.42796314) + 19.250422)
+
+  Equation #16  [complexity = 19]
+    MSE   : 22.1148
+    Score : 0.004826
+    CH4 = (hbar_wet * (h_inv + ((exp(Tv_C * 0.13716699) + h*sinTOD) / exp((h*v * 0.026966438) + -3.6689656)))) * 0.0012241146
+
+  Equation #17  [complexity = 20]
+    MSE   : 22.0460
+    Score : 0.003115
+    CH4 = ((((h_inv * 0.025897667) + h*sinTOD) + exp(Tv_C * 0.13789217)) * (hbar_wet + -0.38359067)) / ((h*v * 0.4287173) + 18.90539)
+
+  Equation #18  [complexity = 21]
+    MSE   : 21.5596
+    Score : 0.022311
+    CH4 = ((0.0091648055 / ((VPD*WS * depth) + 0.007297127)) - (((h*v - Tv_C) * Tv_C) * ((Tv_C * Tv_C) * 3.6277347e-6))) * hbar_wet
+
+  Equation #19  [complexity = 23]
+    MSE   : 21.4997
+    Score : 0.001391
+    CH4 = ((0.012227081 / ((VPD*WS * depth) + 0.010119442)) - ((Tv_C * (Tv_C * (3.58707e-6 * (h*v - (Tv_C + u*VPD))))) * Tv_C)) * hbar_wet
+
+  Equation #20  [complexity = 25]
+    MSE   : 21.4172
+    Score : 0.001921
+    CH4 = ((0.016700238 / ((depth * VPD*WS) + 0.012697218)) - (((Tv_C * (Tv_C * 3.5393361e-6)) * (h*v - ((Tv_C + -1.9858043) + VPD*WS))) * Tv_C)) * hbar_wet
+
+  Equation #21  [complexity = 26]
+    MSE   : 21.4149
+    Score : 0.000110
+    CH4 = hbar_wet * ((0.016700238 / (0.012697218 + (depth * VPD*WS))) - ((h*v - ((Tv_C + VPD*WS) + log(0.18577608))) * (Tv_C * (Tv_C * (Tv_C * 3.5393361e-6)))))
+
+  Equation #22  [complexity = 27]
+    MSE   : 21.2606
+    Score : 0.007229
+    CH4 = (((0.0124797225 / (VPD*WS + 0.0124797225)) - (h_inv * -0.0009986444)) - (Tv_C * (((SR*HODsin * 4.589189e-8) - ((h*v - Tv_C) * -3.4875045e-6)) * (Tv_C * Tv_C)))) * hbar_wet
+
+  Equation #23  [complexity = 29]
+    MSE   : 21.0739
+    Score : 0.004411
+    CH4 = hbar_wet * (((0.012477236 / (VPD*WS + 0.012479721)) - (h_inv * -0.001024259)) - (((SR*HODsin * 6.0986686e-8) - ((h*v - Tv_C) * -3.5477594e-6)) * ((Tv_C * (Tv_C + h*sinTOD)) * Tv_C)))
+
+  Equation #24  [complexity = 31]
+    MSE   : 20.9721
+    Score : 0.002420
+    CH4 = hbar_wet * (((0.012477236 / (VPD*WS + (0.30451682 / Tv_C))) - (h_inv * -0.001024259)) - (((SR*HODsin * 6.0986686e-8) - ((h*v - Tv_C) * -3.5477594e-6)) * (Tv_C * ((Tv_C + h*sinTOD) * Tv_C))))
+
+  Equation #25  [complexity = 33]
+    MSE   : 20.9721
+    Score : 0.000001
+    CH4 = hbar_wet * (((0.012477236 / (VPD*WS + (0.30451682 / (Tv_C + 0.012479721)))) - (h_inv * -0.001024259)) - (((SR*HODsin * 6.0986686e-8) - ((h*v - Tv_C) * -3.5477594e-6)) * ((Tv_C * (Tv_C + h*sinTOD)) * Tv_C)))
+
+  Equation #26  [complexity = 35]
+    MSE   : 20.8721
+    Score : 0.002388
+    CH4 = (Tv_C * (((((((0.78258973 / (VPD*WS + 0.015839323)) - ((((hbar_wet * h_inv) - (SR*HODsin + SR*v)) * -0.018012015) + dayhr)) - ((Tv_C * -0.1282746) * Tv_C)) * hbar_wet) * Tv_C) * 3.396411e-5) - 0.15248169)) - -3.07436
+
+  Equation #27  [complexity = 36]
+    MSE   : 20.8609
+    Score : 0.000539
+    CH4 = (Tv_C * (((hbar_wet * ((exp(0.08555478 / (VPD*WS + 0.02312382)) - ((((h_inv * hbar_wet) - (SR*HODsin + SR*v)) * -0.015102569) + dayhr)) - (Tv_C * (Tv_C * -0.10841438)))) * (Tv_C * 4.0757288e-5)) - 0.14761275)) - -3.0611513
+
+  Equation #28  [complexity = 37]
+    MSE   : 20.7446
+    Score : 0.005590
+    CH4 = (Tv_C * ((hbar_wet * (((((1.0072794 / (VPD*WS + 0.021348426)) - ((((h_inv * hbar_wet) - ((SR*HODsin / 0.44486928) + SR*v)) * -0.016493142) + dayhr)) - ((Tv_C * -0.118630275) * Tv_C)) * 3.6724705e-5) * Tv_C)) - 0.15483603)) - -3.1084805
+
+  Equation #29  [complexity = 38]
+    MSE   : 20.7438
+    Score : 0.000038
+    CH4 = ((((((exp(0.085836105 / (VPD*WS + 0.022837592)) - (dayhr + (((h_inv * hbar_wet) - (SR*HODsin + (SR*HODsin + SR*v))) * -0.014983347))) - ((Tv_C * Tv_C) * -0.10826193)) * (Tv_C * hbar_wet)) * 4.01321e-5) - 0.14763711) * Tv_C) - -3.1033418
+
+  Equation #30  [complexity = 39]
+    MSE   : 20.6922
+    Score : 0.002491
+    CH4 = (((((Tv_C * 4.2074123e-5) * hbar_wet) * (((0.5976842 / (VPD*WS + 0.015005849)) - (dayhr + (((h_inv * hbar_wet) - ((SR*u * -0.43942362) + (SR*v + SR*HODsin))) * -0.015275868))) - (Tv_C * (Tv_C * -0.10448968)))) - 0.14852124) * Tv_C) - -3.126058
+
+  Equation #31  [complexity = 40]
+    MSE   : 20.6813
+    Score : 0.000527
+    CH4 = (((((exp(0.087551735 / (VPD*WS + 0.023249526)) - (dayhr + (((h_inv * hbar_wet) - (SR*v + ((SR*u * -0.4392101) + SR*HODsin))) * -0.015417809))) - (Tv_C * (Tv_C * -0.1079979))) * ((hbar_wet * Tv_C) * 4.0071925e-5)) - 0.14760266) * Tv_C) - -3.1261437
+
+
+==========================================================================================
+CANDIDATE EQUATIONS - DETAILED COMPARISON
+==========================================================================================
+
+     #  Label                           Cmplx       R²      RMSE       MAE   NaN
+  ----  ------------------------------  -----  -------  --------  --------  ----
+  #5    Auto-best (highest score)           6    0.403      4.71      3.08     0
+  #6    Near-knee candidate                 7    0.460      4.48      2.87     0
+  #31   Best accuracy (most complex)       40    0.623      3.74      2.44     0
+  #18   Mid-complexity candidate           21    0.584      3.93      2.50     0
+
+
+  --- Equation #5 (Auto-best (highest score)) ---
+  Complexity : 6
+  R²         : 0.4030
+  RMSE       : 4.7101 mg CH4/m2/h
+  MAE        : 3.0770 mg CH4/m2/h
+  Equation   :
+    CH4 = hbar_wet / log(42.13077 / Tv_C)
+
+  --- Equation #6 (Near-knee candidate) ---
+  Complexity : 7
+  R²         : 0.4598
+  RMSE       : 4.4805 mg CH4/m2/h
+  MAE        : 2.8688 mg CH4/m2/h
+  Equation   :
+    CH4 = hbar_wet / ((34.291985 / Tv_C) + -0.8011351)
+
+  --- Equation #31 (Best accuracy (most complex)) ---
+  Complexity : 40
+  R²         : 0.6226
+  RMSE       : 3.7447 mg CH4/m2/h
+  MAE        : 2.4358 mg CH4/m2/h
+  Equation   :
+    CH4 = (((((exp(0.087551735 / (VPD*WS + 0.023249526)) - (dayhr + (((h_inv * hbar_wet) - (SR*v + ((SR*u * -0.4392101) + SR*HODsin))) * -0.015417809))) - (Tv_C * (Tv_C * -0.1079979))) * ((hbar_wet * Tv_C) * 4.0071925e-5)) - 0.14760266) * Tv_C) - -3.1261437
+
+  --- Equation #18 (Mid-complexity candidate) ---
+  Complexity : 21
+  R²         : 0.5838
+  RMSE       : 3.9326 mg CH4/m2/h
+  MAE        : 2.5007 mg CH4/m2/h
+  Equation   :
+    CH4 = ((0.0091648055 / ((VPD*WS * depth) + 0.007297127)) - (((h*v - Tv_C) * Tv_C) * ((Tv_C * Tv_C) * 3.6277347e-6))) * hbar_wet
+
+
+==========================================================================================
+ORYZA INTEGRATION NOTES
+==========================================================================================
+
+Variable mapping (ECS measurement -> ORYZA equivalent):
+
+  dayhr                -> Derive from ORYZA state or weather input
+  depth                -> ORYZA water balance module (WL0)
+  Tv_C                 -> Derive from ORYZA state or weather input
+  SR*u                 -> Derive from ORYZA state or weather input
+  SR*v                 -> Derive from ORYZA state or weather input
+  VPD*WS               -> Derive from ORYZA state or weather input
+  h_inv                -> 1/(ORYZA water depth + 0.001)
+  u*VPD                -> Derive from ORYZA state or weather input
+  SR*Ta                -> Derive from ORYZA state or weather input
+  SR*HODsin            -> Weather SR x sin(2pi x hour/24)
+  h*sinTOD             -> ORYZA depth x sin(2pi x hour/24)
+  h*cosTOD             -> ORYZA depth x cos(2pi x hour/24)
+  h*v                  -> ORYZA depth x (-WS x cos(WD))
+  hbar_wet             -> Derive from ORYZA state or weather input
+
+
+To embed in ORYZA:
+  1. Choose candidate equation balancing accuracy and simplicity
+  2. Replace variables with ORYZA equivalents above
+  3. Code into ORYZA simulation loop
+  4. Compute CH4 flux at each timestep
+  5. Validate against EC station observations

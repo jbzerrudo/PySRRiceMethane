@@ -1,0 +1,225 @@
+==========================================================================================
+SYMBOLIC REGRESSION - EQUATION DISCOVERY REPORT (v4)
+Generated: 2026-07-23 20:14:23
+Target: F_CH4_F
+Predictors: dayhr, SR, rate_P, hwet, h*DelTsa, uzonal, vmerid, buoy_TsTa, SR*u, SR*v, h_inv, v*VPD, SR*HODsin, VPD*WS*d1sin, q/rho, h*sinTOD, h*cosTOD
+PySR iterations: 2000, Max complexity: 35
+Nested constraints: {'exp': {'exp': 1, 'log': 0}, 'log': {'log': 0, 'exp': 1}, 'tanh': {'tanh': 0}}
+Arg complexity constraints: {'exp': 8, 'log': 8, 'tanh': 8, 'sqrt': 10, '+': (-1, -1), '-': (-1, -1), '*': (-1, -1), '/': (-1, -1)}
+==========================================================================================
+
+VARIABLE MAPPING
+----------------------------------------
+  x0  =  dayhr
+  x1  =  SR
+  x2  =  rate_P
+  x3  =  hwet
+  x4  =  h*DelTsa
+  x5  =  uzonal
+  x6  =  vmerid
+  x7  =  buoy_TsTa
+  x8  =  SR*u
+  x9  =  SR*v
+  x10  =  h_inv
+  x11  =  v*VPD
+  x12  =  SR*HODsin
+  x13  =  VPD*WS*d1sin
+  x14  =  q/rho
+  x15  =  h*sinTOD
+  x16  =  h*cosTOD
+
+PARETO FRONT (ranked by complexity)
+------------------------------------------------------------------------------------------
+
+  Equation #0  [complexity = 1]
+    MSE   : 46.3040
+    Score : 0.000000
+    CH4 = 5.1897635
+
+  Equation #1  [complexity = 3]
+    MSE   : 25.9355
+    Score : 0.289808
+    CH4 = q/rho * 710.8082
+
+  Equation #2  [complexity = 5]
+    MSE   : 22.4115
+    Score : 0.073019
+    CH4 = q/rho * (SR + 488.661)
+
+  Equation #3  [complexity = 7]
+    MSE   : 20.4097
+    Score : 0.046783
+    CH4 = (q/rho + -0.0025570032) * (SR + 685.7263)
+
+  Equation #4  [complexity = 9]
+    MSE   : 19.6649
+    Score : 0.018588
+    CH4 = (q/rho - 0.0028546627) * ((SR + 677.2453) - SR*HODsin)
+
+  Equation #5  [complexity = 10]
+    MSE   : 19.6648
+    Score : 0.000004
+    CH4 = tanh(q/rho - 0.0028546706) * (SR + (677.2453 - SR*HODsin))
+
+  Equation #6  [complexity = 11]
+    MSE   : 19.1444
+    Score : 0.026818
+    CH4 = ((SR + (930.6921 - SR*HODsin)) * (q/rho - 0.0023371384)) * 0.74974716
+
+  Equation #7  [complexity = 12]
+    MSE   : 19.0199
+    Score : 0.006524
+    CH4 = ((exp(buoy_TsTa) * q/rho) + -0.0025570032) * (SR + (666.98376 - SR*HODsin))
+
+  Equation #8  [complexity = 13]
+    MSE   : 18.7635
+    Score : 0.013572
+    CH4 = (((SR + 675.0199) - SR*HODsin) * (q/rho - 0.0029106496)) + (buoy_TsTa * 8.51413)
+
+  Equation #9  [complexity = 14]
+    MSE   : 18.7612
+    Score : 0.000125
+    CH4 = (tanh(buoy_TsTa) * 8.565027) + ((q/rho - 0.0029106496) * ((674.8971 + SR) - SR*HODsin))
+
+  Equation #10  [complexity = 15]
+    MSE   : 18.5609
+    Score : 0.010730
+    CH4 = (((buoy_TsTa * 12.873757) - 3.922386) + (q/rho * ((SR - SR*HODsin) + 1086.4478))) * 0.69246304
+
+  Equation #11  [complexity = 17]
+    MSE   : 18.4764
+    Score : 0.002282
+    CH4 = ((((((SR + 1078.0121) - SR*HODsin) * 0.6580542) - v*VPD) * q/rho) + -2.1855826) + (buoy_TsTa * 7.542364)
+
+  Equation #12  [complexity = 18]
+    MSE   : 18.4391
+    Score : 0.002023
+    CH4 = (buoy_TsTa * 8.532578) + ((sqrt(q/rho) + 0.54877484) * ((q/rho * ((SR + 1078.0251) - SR*HODsin)) + -3.2672262))
+
+  Equation #13  [complexity = 19]
+    MSE   : 18.3541
+    Score : 0.004617
+    CH4 = ((((SR - SR*HODsin) * q/rho) - ((buoy_TsTa + ((114.60463 - v*VPD) * q/rho)) * -10.269505)) * 0.6097557) + -2.1582448
+
+  Equation #14  [complexity = 20]
+    MSE   : 18.3130
+    Score : 0.002243
+    CH4 = (-2.1557534 + (buoy_TsTa * 8.532578)) + (((((SR + 1078.0251) - SR*HODsin) * (sqrt(q/rho) + 0.54877484)) - v*VPD) * q/rho)
+
+  Equation #15  [complexity = 21]
+    MSE   : 18.2113
+    Score : 0.005570
+    CH4 = -2.189412 + ((((SR - SR*HODsin) * q/rho) - (-10.269505 * (buoy_TsTa + (q/rho * (116.37223 - (v*VPD + dayhr)))))) * 0.6593731)
+
+  Equation #16  [complexity = 23]
+    MSE   : 18.0501
+    Score : 0.004446
+    CH4 = -2.491237 + (((q/rho * (SR - SR*HODsin)) - ((buoy_TsTa + ((112.96449 - ((q/rho * SR*v) + dayhr)) * q/rho)) * -11.412895)) * 0.6462586)
+
+  Equation #17  [complexity = 25]
+    MSE   : 17.9829
+    Score : 0.001865
+    CH4 = -2.491237 + (((((SR - SR*HODsin) - VPD*WS*d1sin) * q/rho) - ((((112.96449 - ((SR*v * q/rho) + dayhr)) * q/rho) + buoy_TsTa) * -11.354844)) * 0.6462586)
+
+  Equation #18  [complexity = 27]
+    MSE   : 17.9342
+    Score : 0.001356
+    CH4 = ((((((SR - VPD*WS*d1sin) - VPD*WS*d1sin) - SR*HODsin) * q/rho) - (((q/rho * (112.96449 - ((SR*v * q/rho) + dayhr))) + buoy_TsTa) * -11.354844)) * 0.6462586) + -2.491237
+
+  Equation #19  [complexity = 29]
+    MSE   : 17.8873
+    Score : 0.001309
+    CH4 = (0.6462586 * ((q/rho * (SR - (SR*HODsin + ((hwet - VPD*WS*d1sin) / -0.2435279)))) - (-11.354844 * (((112.96449 - ((q/rho * SR*v) + dayhr)) * q/rho) + buoy_TsTa)))) + -2.6425982
+
+  Equation #20  [complexity = 31]
+    MSE   : 17.8807
+    Score : 0.000185
+    CH4 = (((q/rho * (((SR - VPD*WS*d1sin) - VPD*WS*d1sin) - (VPD*WS*d1sin + SR*HODsin))) - (((q/rho * (114.72901 - ((dayhr - uzonal) + (SR*v * q/rho)))) + buoy_TsTa) * -10.847681)) * 0.64556617) + -2.4040453
+
+  Equation #21  [complexity = 33]
+    MSE   : 17.8561
+    Score : 0.000687
+    CH4 = (rate_P + (((q/rho * (((SR - VPD*WS*d1sin) - VPD*WS*d1sin) - (VPD*WS*d1sin + SR*HODsin))) - (((q/rho * (114.72901 - ((dayhr - uzonal) + (SR*v * q/rho)))) + buoy_TsTa) * -10.847681)) * 0.64556617)) + -2.4040453
+
+  Equation #22  [complexity = 35]
+    MSE   : 17.8425
+    Score : 0.000381
+    CH4 = buoy_TsTa + ((rate_P + -2.551242) + ((((((SR - VPD*WS*d1sin) - VPD*WS*d1sin) - (VPD*WS*d1sin + SR*HODsin)) * q/rho) - ((buoy_TsTa + (q/rho * (114.72901 - (((SR*v * q/rho) + dayhr) - hwet)))) * -10.847681)) * 0.64556617))
+
+
+==========================================================================================
+CANDIDATE EQUATIONS - DETAILED COMPARISON
+==========================================================================================
+
+     #  Label                           Cmplx       R²      RMSE       MAE   NaN
+  ----  ------------------------------  -----  -------  --------  --------  ----
+  #1    Auto-best (highest score)           3    0.486      6.08      4.11     0
+  #3    Knee of Pareto front                7    0.636      5.12      3.60     0
+  #22   Best accuracy (most complex)       35    0.687      4.75      3.35     0
+  #13   Mid-complexity candidate           19    0.680      4.80      3.38     0
+
+
+  --- Equation #1 (Auto-best (highest score)) ---
+  Complexity : 3
+  R²         : 0.4860
+  RMSE       : 6.0812 mg CH4/m2/h
+  MAE        : 4.1062 mg CH4/m2/h
+  Equation   :
+    CH4 = q/rho * 710.8082
+
+  --- Equation #3 (Knee of Pareto front) ---
+  Complexity : 7
+  R²         : 0.6363
+  RMSE       : 5.1157 mg CH4/m2/h
+  MAE        : 3.5970 mg CH4/m2/h
+  Equation   :
+    CH4 = (q/rho + -0.0025570032) * (SR + 685.7263)
+
+  --- Equation #22 (Best accuracy (most complex)) ---
+  Complexity : 35
+  R²         : 0.6870
+  RMSE       : 4.7459 mg CH4/m2/h
+  MAE        : 3.3501 mg CH4/m2/h
+  Equation   :
+    CH4 = buoy_TsTa + ((rate_P + -2.551242) + ((((((SR - VPD*WS*d1sin) - VPD*WS*d1sin) - (VPD*WS*d1sin + SR*HODsin)) * q/rho) - ((buoy_TsTa + (q/rho * (114.72901 - (((SR*v * q/rho) + dayhr) - hwet)))) * -10.847681)) * 0.64556617))
+
+  --- Equation #13 (Mid-complexity candidate) ---
+  Complexity : 19
+  R²         : 0.6803
+  RMSE       : 4.7958 mg CH4/m2/h
+  MAE        : 3.3814 mg CH4/m2/h
+  Equation   :
+    CH4 = ((((SR - SR*HODsin) * q/rho) - ((buoy_TsTa + ((114.60463 - v*VPD) * q/rho)) * -10.269505)) * 0.6097557) + -2.1582448
+
+
+==========================================================================================
+ORYZA INTEGRATION NOTES
+==========================================================================================
+
+Variable mapping (ECS measurement -> ORYZA equivalent):
+
+  dayhr                -> Derive from ORYZA state or weather input
+  SR                   -> Weather input file (RDD)
+  rate_P               -> Derive from ORYZA state or weather input
+  hwet                 -> MAX(0, ORYZA water depth)
+  h*DelTsa             -> Derive from ORYZA state or weather input
+  uzonal               -> Derive from ORYZA state or weather input
+  vmerid               -> Derive from ORYZA state or weather input
+  buoy_TsTa            -> Derive from ORYZA state or weather input
+  SR*u                 -> Derive from ORYZA state or weather input
+  SR*v                 -> Derive from ORYZA state or weather input
+  h_inv                -> 1/(ORYZA water depth + 0.001)
+  v*VPD                -> Derive from ORYZA state or weather input
+  SR*HODsin            -> Weather SR x sin(2pi x hour/24)
+  VPD*WS*d1sin         -> Derive from ORYZA state or weather input
+  q/rho                -> Derive from ORYZA state or weather input
+  h*sinTOD             -> ORYZA depth x sin(2pi x hour/24)
+  h*cosTOD             -> ORYZA depth x cos(2pi x hour/24)
+
+
+To embed in ORYZA:
+  1. Choose candidate equation balancing accuracy and simplicity
+  2. Replace variables with ORYZA equivalents above
+  3. Code into ORYZA simulation loop
+  4. Compute CH4 flux at each timestep
+  5. Validate against EC station observations

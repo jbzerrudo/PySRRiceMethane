@@ -1,0 +1,245 @@
+==========================================================================================
+SYMBOLIC REGRESSION - EQUATION DISCOVERY REPORT (v4)
+Generated: 2026-07-23 23:33:00
+Target: F_CH4_F
+Predictors: rate_P, Tv_K, vmerid, SR*u, SR*v, h_inv, u*VPD, v*VPD, SR*HODsin, VPD*WS*d1sin, h*sinTOD, h*cosTOD
+PySR iterations: 2000, Max complexity: 35
+Nested constraints: {'exp': {'exp': 1, 'log': 0}, 'log': {'log': 0, 'exp': 1}, 'tanh': {'tanh': 0}}
+Arg complexity constraints: {'exp': 8, 'log': 8, 'tanh': 8, 'sqrt': 10, '+': (-1, -1), '-': (-1, -1), '*': (-1, -1), '/': (-1, -1)}
+==========================================================================================
+
+VARIABLE MAPPING
+----------------------------------------
+  x0  =  rate_P
+  x1  =  Tv_K
+  x2  =  vmerid
+  x3  =  SR*u
+  x4  =  SR*v
+  x5  =  h_inv
+  x6  =  u*VPD
+  x7  =  v*VPD
+  x8  =  SR*HODsin
+  x9  =  VPD*WS*d1sin
+  x10  =  h*sinTOD
+  x11  =  h*cosTOD
+
+PARETO FRONT (ranked by complexity)
+------------------------------------------------------------------------------------------
+
+  Equation #0  [complexity = 1]
+    MSE   : 58.0069
+    Score : 0.000000
+    CH4 = 7.52758
+
+  Equation #1  [complexity = 3]
+    MSE   : 35.6257
+    Score : 0.243748
+    CH4 = Tv_K + -288.0496
+
+  Equation #2  [complexity = 5]
+    MSE   : 31.9390
+    Score : 0.054619
+    CH4 = (Tv_K * 0.72554773) - 206.92706
+
+  Equation #3  [complexity = 6]
+    MSE   : 25.9886
+    Score : 0.206170
+    CH4 = exp((Tv_K + -279.0681) * 0.10627632)
+
+  Equation #4  [complexity = 8]
+    MSE   : 25.6355
+    Score : 0.006840
+    CH4 = exp(((Tv_K + -276.881) - vmerid) * 0.09698014)
+
+  Equation #5  [complexity = 9]
+    MSE   : 25.2819
+    Score : 0.013891
+    CH4 = exp((Tv_K + -279.4327) * 0.10827534) + tanh(h*sinTOD)
+
+  Equation #6  [complexity = 10]
+    MSE   : 25.1487
+    Score : 0.005280
+    CH4 = (h*sinTOD * 0.40052593) + exp((Tv_K + -279.36972) * 0.10827538)
+
+  Equation #7  [complexity = 11]
+    MSE   : 24.6700
+    Score : 0.019221
+    CH4 = tanh(h*sinTOD - vmerid) + exp((Tv_K + -279.5931) * 0.10881399)
+
+  Equation #8  [complexity = 12]
+    MSE   : 24.6288
+    Score : 0.001672
+    CH4 = exp((Tv_K + -279.35236) * 0.10827538) + ((h*sinTOD - vmerid) * 0.38057175)
+
+  Equation #9  [complexity = 13]
+    MSE   : 24.4727
+    Score : 0.006358
+    CH4 = exp((Tv_K + -279.36972) * 0.10811972) + ((h*sinTOD - vmerid) * tanh(h_inv))
+
+  Equation #10  [complexity = 14]
+    MSE   : 24.4299
+    Score : 0.001749
+    CH4 = tanh((h*sinTOD * exp(h*cosTOD)) - vmerid) + exp((Tv_K + -279.48755) * 0.10827538)
+
+  Equation #11  [complexity = 15]
+    MSE   : 24.2876
+    Score : 0.005843
+    CH4 = (((h*sinTOD + h*sinTOD) - vmerid) * tanh(h_inv)) + exp((Tv_K + -279.35236) * 0.10827538)
+
+  Equation #12  [complexity = 16]
+    MSE   : 24.1626
+    Score : 0.005159
+    CH4 = (1.5287422 * tanh((h*sinTOD * exp(h*cosTOD)) - vmerid)) + exp((-279.48755 + Tv_K) * 0.10827538)
+
+  Equation #13  [complexity = 17]
+    MSE   : 24.1378
+    Score : 0.001027
+    CH4 = exp(sqrt(Tv_K * 14.251528) - 63.16203) + (tanh((exp(h*cosTOD) * h*sinTOD) - vmerid) * 1.6886765)
+
+  Equation #14  [complexity = 18]
+    MSE   : 24.0915
+    Score : 0.001921
+    CH4 = (tanh((h*sinTOD * exp(h*cosTOD)) - (vmerid / 1.8345994)) * 1.8345994) + exp((Tv_K + -279.0681) * 0.10627632)
+
+  Equation #15  [complexity = 19]
+    MSE   : 24.0456
+    Score : 0.001907
+    CH4 = (tanh((exp(h*cosTOD) * h*sinTOD) - (vmerid / 1.8130257)) * 1.8130257) + exp(sqrt(Tv_K * 14.251528) - 63.16203)
+
+  Equation #16  [complexity = 20]
+    MSE   : 23.8203
+    Score : 0.009414
+    CH4 = exp((Tv_K + -278.8979) * 0.106275156) + ((Tv_K + -279.8606) * (tanh((h*sinTOD * exp(h*cosTOD)) - vmerid) * 0.103443176))
+
+  Equation #17  [complexity = 21]
+    MSE   : 23.8088
+    Score : 0.000482
+    CH4 = (tanh((exp(h*cosTOD) * h*sinTOD) - vmerid) * ((Tv_K + -279.40384) * 0.10527316)) + exp(sqrt(Tv_K * 14.00946) - 62.58637)
+
+  Equation #18  [complexity = 22]
+    MSE   : 23.6445
+    Score : 0.006924
+    CH4 = ((Tv_K + -279.5518) * (tanh((exp(h*cosTOD) * h*sinTOD) - (vmerid / 3.197522)) * 0.14059763)) + exp((Tv_K + -279.5518) * 0.10949366)
+
+  Equation #19  [complexity = 23]
+    MSE   : 23.6262
+    Score : 0.000775
+    CH4 = (((Tv_K + -278.46774) * tanh((h*sinTOD * exp(h*cosTOD)) - (vmerid / 2.1895738))) * 0.11706607) + exp(sqrt(Tv_K * 14.00946) - 62.58637)
+
+  Equation #20  [complexity = 25]
+    MSE   : 23.5902
+    Score : 0.000761
+    CH4 = (((0.09431578 * tanh((h*sinTOD * exp(h*cosTOD)) - vmerid)) * (-278.69193 + Tv_K)) + exp((Tv_K + -280.67908) * 0.1122054)) + tanh(h_inv / Tv_K)
+
+  Equation #21  [complexity = 26]
+    MSE   : 23.5724
+    Score : 0.000756
+    CH4 = (exp((Tv_K + -278.46774) * 0.10546219) + ((Tv_K + -278.46774) * (tanh((h*sinTOD * exp(h*cosTOD)) - (vmerid / 1.9467053)) * 0.10546219))) + (-0.0668286 / h_inv)
+
+  Equation #22  [complexity = 27]
+    MSE   : 23.4105
+    Score : 0.006893
+    CH4 = exp((Tv_K + -279.48755) * 0.10827538) + (tanh(h_inv / (u*VPD - -3.1746995)) + ((Tv_K + -278.71515) * (tanh((exp(h*cosTOD) * h*sinTOD) - vmerid) * 0.09865931)))
+
+  Equation #23  [complexity = 28]
+    MSE   : 23.3810
+    Score : 0.001258
+    CH4 = exp((Tv_K + -279.48755) * 0.10827538) + (tanh(sqrt(h_inv) / (u*VPD - -3.1746995)) + ((Tv_K + -278.71515) * (tanh((exp(h*cosTOD) * h*sinTOD) - vmerid) * 0.09865931)))
+
+  Equation #24  [complexity = 29]
+    MSE   : 23.3072
+    Score : 0.003164
+    CH4 = (exp((Tv_K + -279.36972) * 0.10827538) + tanh(h_inv / (u*VPD - -3.1742632))) + ((tanh((h*sinTOD * exp(h*cosTOD)) - (vmerid / 2.1524796)) * 0.10827538) * (Tv_K + -279.0171))
+
+  Equation #25  [complexity = 30]
+    MSE   : 23.2813
+    Score : 0.001109
+    CH4 = (tanh(sqrt(h_inv) / (u*VPD - -3.1742632)) + exp(0.10827538 * (Tv_K + -279.36972))) + ((0.10827538 * (Tv_K + -279.36972)) * tanh((exp(h*cosTOD) * h*sinTOD) - (vmerid / 2.1524796)))
+
+  Equation #26  [complexity = 31]
+    MSE   : 23.2176
+    Score : 0.002743
+    CH4 = (tanh((h_inv / (u*VPD - -3.1742632)) + -0.2312308) + exp((Tv_K + -279.36972) * 0.10827538)) + (tanh((h*sinTOD * exp(h*cosTOD)) - (vmerid / 2.1524796)) * ((Tv_K + -279.36972) * 0.13537036))
+
+  Equation #27  [complexity = 33]
+    MSE   : 23.1018
+    Score : 0.002498
+    CH4 = (((sqrt(Tv_K * 14.170093) - 62.591988) * tanh((h*sinTOD * exp(h*cosTOD)) - (vmerid / 2.1531568))) + exp(sqrt(Tv_K * 14.170093) - 62.90748)) + tanh((h_inv / (u*VPD - -1.0255105)) - 62.90748)
+
+  Equation #28  [complexity = 35]
+    MSE   : 23.0700
+    Score : 0.000690
+    CH4 = ((((sqrt(Tv_K * 14.170093) - 62.591988) * tanh((h*sinTOD * exp(h*cosTOD)) - (vmerid / 2.1531568))) + exp(sqrt(Tv_K * 14.170093) - 62.91)) + tanh((h_inv / (u*VPD - -1.0255105)) - 62.90748)) + 0.19438538
+
+
+==========================================================================================
+CANDIDATE EQUATIONS - DETAILED COMPARISON
+==========================================================================================
+
+     #  Label                           Cmplx       R²      RMSE       MAE   NaN
+  ----  ------------------------------  -----  -------  --------  --------  ----
+  #1    Auto-best (highest score)           3    0.380      6.13      4.89     0
+  #3    Knee of Pareto front                6    0.504      5.49      4.10     0
+  #28   Best accuracy (most complex)       35    0.563      5.15      3.90     0
+  #16   Mid-complexity candidate           20    0.569      5.11      3.90     0
+
+
+  --- Equation #1 (Auto-best (highest score)) ---
+  Complexity : 3
+  R²         : 0.3796
+  RMSE       : 6.1340 mg CH4/m2/h
+  MAE        : 4.8941 mg CH4/m2/h
+  Equation   :
+    CH4 = Tv_K + -288.0496
+
+  --- Equation #3 (Knee of Pareto front) ---
+  Complexity : 6
+  R²         : 0.5039
+  RMSE       : 5.4850 mg CH4/m2/h
+  MAE        : 4.0983 mg CH4/m2/h
+  Equation   :
+    CH4 = exp((Tv_K + -279.0681) * 0.10627632)
+
+  --- Equation #28 (Best accuracy (most complex)) ---
+  Complexity : 35
+  R²         : 0.5626
+  RMSE       : 5.1508 mg CH4/m2/h
+  MAE        : 3.8983 mg CH4/m2/h
+  Equation   :
+    CH4 = ((((sqrt(Tv_K * 14.170093) - 62.591988) * tanh((h*sinTOD * exp(h*cosTOD)) - (vmerid / 2.1531568))) + exp(sqrt(Tv_K * 14.170093) - 62.91)) + tanh((h_inv / (u*VPD - -1.0255105)) - 62.90748)) + 0.19438538
+
+  --- Equation #16 (Mid-complexity candidate) ---
+  Complexity : 20
+  R²         : 0.5692
+  RMSE       : 5.1117 mg CH4/m2/h
+  MAE        : 3.9047 mg CH4/m2/h
+  Equation   :
+    CH4 = exp((Tv_K + -278.8979) * 0.106275156) + ((Tv_K + -279.8606) * (tanh((h*sinTOD * exp(h*cosTOD)) - vmerid) * 0.103443176))
+
+
+==========================================================================================
+ORYZA INTEGRATION NOTES
+==========================================================================================
+
+Variable mapping (ECS measurement -> ORYZA equivalent):
+
+  rate_P               -> Derive from ORYZA state or weather input
+  Tv_K                 -> Derive from ORYZA state or weather input
+  vmerid               -> Derive from ORYZA state or weather input
+  SR*u                 -> Derive from ORYZA state or weather input
+  SR*v                 -> Derive from ORYZA state or weather input
+  h_inv                -> 1/(ORYZA water depth + 0.001)
+  u*VPD                -> Derive from ORYZA state or weather input
+  v*VPD                -> Derive from ORYZA state or weather input
+  SR*HODsin            -> Weather SR x sin(2pi x hour/24)
+  VPD*WS*d1sin         -> Derive from ORYZA state or weather input
+  h*sinTOD             -> ORYZA depth x sin(2pi x hour/24)
+  h*cosTOD             -> ORYZA depth x cos(2pi x hour/24)
+
+
+To embed in ORYZA:
+  1. Choose candidate equation balancing accuracy and simplicity
+  2. Replace variables with ORYZA equivalents above
+  3. Code into ORYZA simulation loop
+  4. Compute CH4 flux at each timestep
+  5. Validate against EC station observations

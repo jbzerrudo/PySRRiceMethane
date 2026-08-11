@@ -1,0 +1,222 @@
+==========================================================================================
+SYMBOLIC REGRESSION - EQUATION DISCOVERY REPORT (v4)
+Generated: 2026-08-05 13:46:08
+Target: F_CH4_F
+Predictors: AUC_wet, h*Pr, Tv_C, uzonal, VPD*WS, u*VPD, SR*HODsin
+PySR iterations: 2000, Max complexity: 40
+Nested constraints: {'exp': {'exp': 0, 'log': 0}, 'log': {'log': 0, 'exp': 1}}
+Arg complexity constraints: {'exp': 8, 'log': 8, 'sqrt': 10, '+': (-1, -1), '-': (-1, -1), '*': (-1, -1), '/': (-1, -1)}
+==========================================================================================
+
+VARIABLE MAPPING
+----------------------------------------
+  x0  =  AUC_wet
+  x1  =  h*Pr
+  x2  =  Tv_C
+  x3  =  uzonal
+  x4  =  VPD*WS
+  x5  =  u*VPD
+  x6  =  SR*HODsin
+
+PARETO FRONT (ranked by complexity)
+------------------------------------------------------------------------------------------
+
+  Equation #0  [complexity = 1]
+    MSE   : 24.2105
+    Score : 0.000000
+    CH4 = 3.5770717
+
+  Equation #1  [complexity = 2]
+    MSE   : 23.0704
+    Score : 0.048235
+    CH4 = sqrt(Tv_C)
+
+  Equation #2  [complexity = 3]
+    MSE   : 16.5573
+    Score : 0.331725
+    CH4 = AUC_wet * 0.00072568096
+
+  Equation #3  [complexity = 5]
+    MSE   : 15.1645
+    Score : 0.043934
+    CH4 = (AUC_wet * Tv_C) * 2.5926183e-5
+
+  Equation #4  [complexity = 6]
+    MSE   : 14.2830
+    Score : 0.059889
+    CH4 = exp(Tv_C * (AUC_wet * 6.9009147e-6))
+
+  Equation #5  [complexity = 7]
+    MSE   : 14.0378
+    Score : 0.017314
+    CH4 = (AUC_wet * exp(sqrt(Tv_C))) * 3.2223152e-6
+
+  Equation #6  [complexity = 8]
+    MSE   : 13.8668
+    Score : 0.012257
+    CH4 = AUC_wet * exp((Tv_C * 0.09860589) + -10.139401)
+
+  Equation #7  [complexity = 9]
+    MSE   : 12.9664
+    Score : 0.067136
+    CH4 = (sqrt(exp(Tv_C + -49.306595)) - -0.00056359114) * AUC_wet
+
+  Equation #8  [complexity = 10]
+    MSE   : 12.8735
+    Score : 0.007194
+    CH4 = AUC_wet * (exp((Tv_C + -53.463577) * 0.38101658) + 0.00051056896)
+
+  Equation #9  [complexity = 11]
+    MSE   : 12.1174
+    Score : 0.060521
+    CH4 = ((AUC_wet * sqrt(exp(-67.369354 + Tv_C))) - -0.00054409204) * AUC_wet
+
+  Equation #10  [complexity = 13]
+    MSE   : 11.6568
+    Score : 0.019377
+    CH4 = ((sqrt(exp(Tv_C + -85.7208)) * (AUC_wet * AUC_wet)) - -0.000542768) * AUC_wet
+
+  Equation #11  [complexity = 15]
+    MSE   : 10.7941
+    Score : 0.038446
+    CH4 = AUC_wet * ((sqrt(exp(Tv_C + -74.532)) * ((29.880516 - u*VPD) * AUC_wet)) - -0.0005307898)
+
+  Equation #12  [complexity = 17]
+    MSE   : 10.3415
+    Score : 0.021416
+    CH4 = (((AUC_wet * (AUC_wet * (28.006708 - u*VPD))) * sqrt(exp(Tv_C + -92.95034))) - -0.0005500937) * AUC_wet
+
+  Equation #13  [complexity = 19]
+    MSE   : 10.1609
+    Score : 0.008813
+    CH4 = AUC_wet * (((sqrt(exp(Tv_C + -74.24099)) * (Tv_C - u*VPD)) * (AUC_wet + (h*Pr * -9.030455))) - -0.0005817352)
+
+  Equation #14  [complexity = 21]
+    MSE   : 10.0709
+    Score : 0.004448
+    CH4 = AUC_wet * ((((Tv_C - u*VPD) * (((VPD*WS + h*Pr) * -8.99818) + AUC_wet)) * sqrt(exp(Tv_C + -73.982506))) - -0.00054983917)
+
+  Equation #15  [complexity = 22]
+    MSE   : 9.4537
+    Score : 0.063237
+    CH4 = AUC_wet * (Tv_C * ((((u*VPD * AUC_wet) * (((h*Pr / 0.05746472) - AUC_wet) * exp(Tv_C + -63.33006))) / VPD*WS) + 2.482596e-5))
+
+  Equation #16  [complexity = 24]
+    MSE   : 8.9741
+    Score : 0.026033
+    CH4 = ((((AUC_wet - (h*Pr / 0.063541844)) * (((9.363771 - u*VPD) * (exp(Tv_C + -63.573387) * AUC_wet)) / VPD*WS)) + 2.3651424e-5) * AUC_wet) * Tv_C
+
+  Equation #17  [complexity = 25]
+    MSE   : 8.9630
+    Score : 0.001239
+    CH4 = ((0.00013162715 - ((u*VPD * (((AUC_wet / VPD*WS) + -140.99548) * exp(Tv_C + -60.899323))) * (AUC_wet - (h*Pr / 0.05893855)))) * AUC_wet) * sqrt(Tv_C)
+
+  Equation #18  [complexity = 26]
+    MSE   : 8.8284
+    Score : 0.015133
+    CH4 = (Tv_C * ((exp(Tv_C + -63.70445) * (((AUC_wet * 0.0013482701) - u*VPD) * ((AUC_wet - (h*Pr / 0.066228054)) * (AUC_wet / VPD*WS)))) - -2.2906579e-5)) * AUC_wet
+
+  Equation #19  [complexity = 27]
+    MSE   : 8.2535
+    Score : 0.067334
+    CH4 = AUC_wet * ((0.000111499525 - ((AUC_wet - (h*Pr / 0.05730366)) * (exp(Tv_C + -61.194775) * (((AUC_wet / VPD*WS) + -140.99875) * u*VPD)))) * sqrt(VPD*WS + Tv_C))
+
+  Equation #20  [complexity = 29]
+    MSE   : 7.9065
+    Score : 0.021479
+    CH4 = (AUC_wet * sqrt(VPD*WS + Tv_C)) * (((exp(Tv_C + -61.56385) * ((AUC_wet - (h*Pr / 0.066175394)) * ((AUC_wet / VPD*WS) + -123.1277))) * (8.769315 - u*VPD)) - -0.00010540859)
+
+  Equation #21  [complexity = 31]
+    MSE   : 7.4696
+    Score : 0.028417
+    CH4 = (sqrt(Tv_C + VPD*WS) * AUC_wet) * (((((AUC_wet - (h*Pr / 0.066228054)) * ((AUC_wet / VPD*WS) + (SR*HODsin * 0.40472415))) * exp(Tv_C + -61.535732)) * (9.221356 - u*VPD)) - -0.00010252914)
+
+  Equation #22  [complexity = 33]
+    MSE   : 7.4379
+    Score : 0.002130
+    CH4 = sqrt(VPD*WS + (Tv_C - u*VPD)) * (AUC_wet * (((AUC_wet - (h*Pr / 0.06394069)) * ((exp(Tv_C + -61.831818) * ((SR*HODsin * 0.40122992) + (AUC_wet / VPD*WS))) * (14.006948 - u*VPD))) - -0.00010376854))
+
+  Equation #23  [complexity = 35]
+    MSE   : 7.3868
+    Score : 0.003445
+    CH4 = (AUC_wet * sqrt((VPD*WS + Tv_C) - u*VPD)) * (((exp(Tv_C + -61.879818) * (((AUC_wet * 0.0014200314) - u*VPD) * ((SR*HODsin * 0.40122992) + (AUC_wet / VPD*WS)))) * (AUC_wet - (h*Pr / 0.06394069))) - -0.00010376854)
+
+  Equation #24  [complexity = 37]
+    MSE   : 7.3536
+    Score : 0.002253
+    CH4 = sqrt((VPD*WS + Tv_C) - u*VPD) * (((((AUC_wet - (h*Pr / 0.06394069)) * (((SR*HODsin * 0.4002534) + (AUC_wet / VPD*WS)) * (exp(Tv_C + -61.879818) * ((AUC_wet * 0.0014200314) - u*VPD)))) - -0.00010376854) * AUC_wet) + -0.037955284)
+
+  Equation #25  [complexity = 39]
+    MSE   : 7.3155
+    Score : 0.002597
+    CH4 = sqrt(VPD*WS + ((Tv_C - u*VPD) - 5.8193674)) * ((h*Pr + AUC_wet) * ((((AUC_wet - (h*Pr / 0.06394069)) * (((SR*HODsin * 0.3951969) + (AUC_wet / VPD*WS)) * exp(Tv_C + -61.879818))) * ((AUC_wet * 0.0014200314) - u*VPD)) - -0.00010376854))
+
+
+==========================================================================================
+CANDIDATE EQUATIONS - DETAILED COMPARISON
+==========================================================================================
+
+     #  Label                           Cmplx       R²      RMSE       MAE   NaN
+  ----  ------------------------------  -----  -------  --------  --------  ----
+  #2    Auto-best (highest score)           3    0.286      4.89      1.79     0
+  #4    Knee of Pareto front                6    0.414      4.43      1.82     0
+  #25   Best accuracy (most complex)       39    0.367      4.61      1.61     1
+  #15   Mid-complexity candidate           22    0.307      4.82      1.64     1
+
+
+  --- Equation #2 (Auto-best (highest score)) ---
+  Complexity : 3
+  R²         : 0.2862
+  RMSE       : 4.8927 mg CH4/m2/h
+  MAE        : 1.7927 mg CH4/m2/h
+  Equation   :
+    CH4 = AUC_wet * 0.00072568096
+
+  --- Equation #4 (Knee of Pareto front) ---
+  Complexity : 6
+  R²         : 0.4144
+  RMSE       : 4.4315 mg CH4/m2/h
+  MAE        : 1.8243 mg CH4/m2/h
+  Equation   :
+    CH4 = exp(Tv_C * (AUC_wet * 6.9009147e-6))
+
+  --- Equation #25 (Best accuracy (most complex)) ---
+  Complexity : 39
+  R²         : 0.3674
+  RMSE       : 4.6073 mg CH4/m2/h
+  MAE        : 1.6075 mg CH4/m2/h
+  Non-finite : 1 predictions dropped
+  Equation   :
+    CH4 = sqrt(VPD*WS + ((Tv_C - u*VPD) - 5.8193674)) * ((h*Pr + AUC_wet) * ((((AUC_wet - (h*Pr / 0.06394069)) * (((SR*HODsin * 0.3951969) + (AUC_wet / VPD*WS)) * exp(Tv_C + -61.879818))) * ((AUC_wet * 0.0014200314) - u*VPD)) - -0.00010376854))
+
+  --- Equation #15 (Mid-complexity candidate) ---
+  Complexity : 22
+  R²         : 0.3067
+  RMSE       : 4.8232 mg CH4/m2/h
+  MAE        : 1.6445 mg CH4/m2/h
+  Non-finite : 1 predictions dropped
+  Equation   :
+    CH4 = AUC_wet * (Tv_C * ((((u*VPD * AUC_wet) * (((h*Pr / 0.05746472) - AUC_wet) * exp(Tv_C + -63.33006))) / VPD*WS) + 2.482596e-5))
+
+
+==========================================================================================
+ORYZA INTEGRATION NOTES
+==========================================================================================
+
+Variable mapping (ECS measurement -> ORYZA equivalent):
+
+  AUC_wet              -> Accumulated from ORYZA water depth (positive part)
+  h*Pr                 -> Derive from ORYZA state or weather input
+  Tv_C                 -> Derive from ORYZA state or weather input
+  uzonal               -> Derive from ORYZA state or weather input
+  VPD*WS               -> Derive from ORYZA state or weather input
+  u*VPD                -> Derive from ORYZA state or weather input
+  SR*HODsin            -> Weather SR x sin(2pi x hour/24)
+
+
+To embed in ORYZA:
+  1. Choose candidate equation balancing accuracy and simplicity
+  2. Replace variables with ORYZA equivalents above
+  3. Code into ORYZA simulation loop
+  4. Compute CH4 flux at each timestep
+  5. Validate against EC station observations

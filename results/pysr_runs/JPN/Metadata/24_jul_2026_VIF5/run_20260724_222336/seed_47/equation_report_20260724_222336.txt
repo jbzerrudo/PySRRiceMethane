@@ -1,0 +1,245 @@
+==========================================================================================
+SYMBOLIC REGRESSION - EQUATION DISCOVERY REPORT (v4)
+Generated: 2026-07-24 23:38:42
+Target: F_CH4_F
+Predictors: VPD, h*Pr, uzonal, vmerid, buoy_TsTa, u*VPD, SR*HODsin
+PySR iterations: 2000, Max complexity: 35
+Nested constraints: {'exp': {'exp': 1, 'log': 0}, 'log': {'log': 0, 'exp': 1}, 'tanh': {'tanh': 0}}
+Arg complexity constraints: {'exp': 8, 'log': 8, 'tanh': 8, 'sqrt': 10, '+': (-1, -1), '-': (-1, -1), '*': (-1, -1), '/': (-1, -1)}
+==========================================================================================
+
+VARIABLE MAPPING
+----------------------------------------
+  x0  =  VPD
+  x1  =  h*Pr
+  x2  =  uzonal
+  x3  =  vmerid
+  x4  =  buoy_TsTa
+  x5  =  u*VPD
+  x6  =  SR*HODsin
+
+PARETO FRONT (ranked by complexity)
+------------------------------------------------------------------------------------------
+
+  Equation #0  [complexity = 1]
+    MSE   : 29.9156
+    Score : 0.000000
+    CH4 = 3.6209102
+
+  Equation #1  [complexity = 2]
+    MSE   : 29.3365
+    Score : 0.019547
+    CH4 = sqrt(VPD)
+
+  Equation #2  [complexity = 3]
+    MSE   : 26.9722
+    Score : 0.084027
+    CH4 = VPD * 0.4960956
+
+  Equation #3  [complexity = 4]
+    MSE   : 25.1638
+    Score : 0.069399
+    CH4 = exp(VPD * 0.1238644)
+
+  Equation #4  [complexity = 5]
+    MSE   : 23.1532
+    Score : 0.083275
+    CH4 = 0.6115315 / (buoy_TsTa + 0.16183081)
+
+  Equation #5  [complexity = 6]
+    MSE   : 22.1801
+    Score : 0.042936
+    CH4 = exp(0.6175347 - (VPD * buoy_TsTa))
+
+  Equation #6  [complexity = 7]
+    MSE   : 21.5292
+    Score : 0.029788
+    CH4 = exp(sqrt(VPD) * (0.49689323 - buoy_TsTa))
+
+  Equation #7  [complexity = 8]
+    MSE   : 20.1505
+    Score : 0.066179
+    CH4 = exp((buoy_TsTa / -1.3574662) * VPD) * 3.2224696
+
+  Equation #8  [complexity = 9]
+    MSE   : 20.1451
+    Score : 0.000269
+    CH4 = exp(buoy_TsTa / tanh(-1.3574662 / VPD)) * 3.2224696
+
+  Equation #9  [complexity = 10]
+    MSE   : 19.8571
+    Score : 0.014401
+    CH4 = exp((buoy_TsTa + -0.17547645) / (-2.1736212 / VPD)) - -1.5195451
+
+  Equation #10  [complexity = 11]
+    MSE   : 18.9901
+    Score : 0.044644
+    CH4 = exp(VPD * (buoy_TsTa / -1.2629261)) * (2.7464414 - tanh(uzonal))
+
+  Equation #11  [complexity = 12]
+    MSE   : 18.9808
+    Score : 0.000487
+    CH4 = exp(tanh(buoy_TsTa) / (-1.2629261 / VPD)) * (2.7740276 - tanh(uzonal))
+
+  Equation #12  [complexity = 13]
+    MSE   : 18.7491
+    Score : 0.012283
+    CH4 = exp((VPD * buoy_TsTa) / -1.2629261) * (exp(tanh(h*Pr)) - tanh(uzonal))
+
+  Equation #13  [complexity = 14]
+    MSE   : 18.6603
+    Score : 0.004749
+    CH4 = exp((buoy_TsTa * VPD) / -1.3655224) * (exp(tanh(u*VPD * -0.07432558)) + 1.8938295)
+
+  Equation #14  [complexity = 15]
+    MSE   : 18.5551
+    Score : 0.005651
+    CH4 = exp(tanh(uzonal + 2.401132)) * exp(((VPD * buoy_TsTa) / -1.4108908) - tanh(uzonal))
+
+  Equation #15  [complexity = 16]
+    MSE   : 18.2077
+    Score : 0.018902
+    CH4 = exp((u*VPD * -0.029152006) + tanh(uzonal + 2.6344059)) * exp((VPD * buoy_TsTa) / -1.3611648)
+
+  Equation #16  [complexity = 17]
+    MSE   : 18.1819
+    Score : 0.001417
+    CH4 = ((exp(tanh(u*VPD * -0.06384651)) + tanh(h*Pr)) * exp((VPD * buoy_TsTa) / -1.2200757)) + 1.1757686
+
+  Equation #17  [complexity = 18]
+    MSE   : 17.5554
+    Score : 0.035064
+    CH4 = (exp(VPD * (buoy_TsTa / -1.4108908)) * exp((u*VPD * -0.032200105) + tanh(uzonal + 2.401132))) + 0.82678753
+
+  Equation #18  [complexity = 19]
+    MSE   : 17.4287
+    Score : 0.007243
+    CH4 = (exp(VPD * (buoy_TsTa / -1.4108908)) * exp(tanh(uzonal + 2.401132) + (u*VPD * -0.032200105))) + tanh(h*Pr)
+
+  Equation #19  [complexity = 20]
+    MSE   : 17.3200
+    Score : 0.006259
+    CH4 = (exp((VPD * buoy_TsTa) / -1.4108908) * exp(tanh(uzonal + 2.401132) + (u*VPD * -0.032200105))) + tanh(log(VPD))
+
+  Equation #20  [complexity = 21]
+    MSE   : 17.2548
+    Score : 0.003772
+    CH4 = tanh(h*Pr) + (exp(tanh(uzonal + 2.401132) + (u*VPD * -0.032200105)) * exp((buoy_TsTa * (VPD + uzonal)) / -1.3875785))
+
+  Equation #21  [complexity = 22]
+    MSE   : 17.1336
+    Score : 0.007048
+    CH4 = (exp((VPD + uzonal) * (buoy_TsTa / -1.3973137)) * exp((u*VPD * -0.032200105) + tanh(uzonal + 2.401132))) + log(sqrt(VPD))
+
+  Equation #22  [complexity = 24]
+    MSE   : 17.1024
+    Score : 0.000911
+    CH4 = ((exp(buoy_TsTa * ((uzonal + VPD) / -1.3973137)) * exp(tanh(uzonal + 2.401132) + (u*VPD * -0.032200105))) + tanh(h*Pr)) * tanh(VPD)
+
+  Equation #23  [complexity = 26]
+    MSE   : 17.0619
+    Score : 0.001184
+    CH4 = (((exp((buoy_TsTa * (VPD + uzonal)) / -1.3973137) - buoy_TsTa) * exp((u*VPD * -0.032200105) + tanh(uzonal + 2.401132))) + tanh(h*Pr)) * tanh(VPD)
+
+  Equation #24  [complexity = 27]
+    MSE   : 16.4130
+    Score : 0.038773
+    CH4 = ((exp(tanh((u*VPD * -0.38055572) - 7.867622)) + tanh(((u*VPD * uzonal) * uzonal) + h*Pr)) * (exp((buoy_TsTa * VPD) / -1.3051746) / 0.68364537)) + 1.4424658
+
+  Equation #25  [complexity = 28]
+    MSE   : 16.3824
+    Score : 0.001867
+    CH4 = tanh(VPD) + ((tanh(h*Pr + (u*VPD * (uzonal * uzonal))) + exp(tanh((u*VPD * -0.38055572) - 7.867622))) * (exp(VPD * (buoy_TsTa / -1.3655224)) / 0.5770984))
+
+  Equation #26  [complexity = 29]
+    MSE   : 16.3160
+    Score : 0.004062
+    CH4 = 1.4424658 + (((exp((buoy_TsTa * VPD) / -1.3051746) / 0.68364537) - buoy_TsTa) * (exp(tanh((u*VPD * -0.38055572) - 7.867622)) + tanh(((uzonal * u*VPD) * uzonal) + h*Pr)))
+
+  Equation #27  [complexity = 30]
+    MSE   : 16.2652
+    Score : 0.003118
+    CH4 = (((exp(tanh((u*VPD * -0.38055572) - 7.867622)) + tanh(h*Pr + ((u*VPD * uzonal) * uzonal))) * exp((buoy_TsTa * VPD) / -1.3655224)) / 0.5537601) + tanh(VPD - u*VPD)
+
+  Equation #28  [complexity = 31]
+    MSE   : 16.2490
+    Score : 0.000999
+    CH4 = (((exp(tanh((u*VPD * -0.38055572) - 7.867622)) + tanh(h*Pr + ((u*VPD * uzonal) * uzonal))) * exp((VPD / -1.3655224) * buoy_TsTa)) / 0.5537601) + tanh(exp(vmerid) - uzonal)
+
+  Equation #29  [complexity = 32]
+    MSE   : 16.1893
+    Score : 0.003681
+    CH4 = (tanh(1.0274981 - uzonal) + (((exp(tanh((u*VPD * -0.37692875) - 7.867622)) + tanh(h*Pr + ((uzonal * uzonal) * u*VPD))) * exp(buoy_TsTa * (VPD / -1.3655224))) / 0.566256)) - -0.24379565
+
+  Equation #30  [complexity = 34]
+    MSE   : 16.1611
+    Score : 0.000870
+    CH4 = (((tanh(h*Pr + (uzonal * (uzonal * u*VPD))) + exp(tanh((u*VPD * -0.37692875) - 7.867622))) * exp(buoy_TsTa * (VPD / -1.3655224))) / 0.566256) + (tanh(sqrt(exp(vmerid)) - uzonal) - -0.20421551)
+
+
+==========================================================================================
+CANDIDATE EQUATIONS - DETAILED COMPARISON
+==========================================================================================
+
+     #  Label                           Cmplx       R²      RMSE       MAE   NaN
+  ----  ------------------------------  -----  -------  --------  --------  ----
+  #2    Auto-best (highest score)           3    0.118      3.03      2.44     0
+  #7    Knee of Pareto front                8   -1.152      4.74      2.44     0
+  #30   Best accuracy (most complex)       34   -0.389      3.81      2.11     0
+  #18   Mid-complexity candidate           19   -0.560      4.04      2.09     0
+
+
+  --- Equation #2 (Auto-best (highest score)) ---
+  Complexity : 3
+  R²         : 0.1183
+  RMSE       : 3.0345 mg CH4/m2/h
+  MAE        : 2.4441 mg CH4/m2/h
+  Equation   :
+    CH4 = VPD * 0.4960956
+
+  --- Equation #7 (Knee of Pareto front) ---
+  Complexity : 8
+  R²         : -1.1517
+  RMSE       : 4.7405 mg CH4/m2/h
+  MAE        : 2.4376 mg CH4/m2/h
+  Equation   :
+    CH4 = exp((buoy_TsTa / -1.3574662) * VPD) * 3.2224696
+
+  --- Equation #30 (Best accuracy (most complex)) ---
+  Complexity : 34
+  R²         : -0.3890
+  RMSE       : 3.8088 mg CH4/m2/h
+  MAE        : 2.1109 mg CH4/m2/h
+  Equation   :
+    CH4 = (((tanh(h*Pr + (uzonal * (uzonal * u*VPD))) + exp(tanh((u*VPD * -0.37692875) - 7.867622))) * exp(buoy_TsTa * (VPD / -1.3655224))) / 0.566256) + (tanh(sqrt(exp(vmerid)) - uzonal) - -0.20421551)
+
+  --- Equation #18 (Mid-complexity candidate) ---
+  Complexity : 19
+  R²         : -0.5598
+  RMSE       : 4.0362 mg CH4/m2/h
+  MAE        : 2.0936 mg CH4/m2/h
+  Equation   :
+    CH4 = (exp(VPD * (buoy_TsTa / -1.4108908)) * exp(tanh(uzonal + 2.401132) + (u*VPD * -0.032200105))) + tanh(h*Pr)
+
+
+==========================================================================================
+ORYZA INTEGRATION NOTES
+==========================================================================================
+
+Variable mapping (ECS measurement -> ORYZA equivalent):
+
+  VPD                  -> Computed from weather input (es - ea)
+  h*Pr                 -> Derive from ORYZA state or weather input
+  uzonal               -> Derive from ORYZA state or weather input
+  vmerid               -> Derive from ORYZA state or weather input
+  buoy_TsTa            -> Derive from ORYZA state or weather input
+  u*VPD                -> Derive from ORYZA state or weather input
+  SR*HODsin            -> Weather SR x sin(2pi x hour/24)
+
+
+To embed in ORYZA:
+  1. Choose candidate equation balancing accuracy and simplicity
+  2. Replace variables with ORYZA equivalents above
+  3. Code into ORYZA simulation loop
+  4. Compute CH4 flux at each timestep
+  5. Validate against EC station observations
