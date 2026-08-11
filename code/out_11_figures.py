@@ -22,7 +22,7 @@ USAGE
     python 11_figures.py            # everything
     python 11_figures.py A          # time series only
     python 11_figures.py B C        # pareto + scatters
-    python 11_figures.py D          # DAT overlay (pooled arm, all three sites)
+    python 11_figures.py D          # DAT panels (pooled arm, one per site)
     python 11_figures.py A MASE     # one figure, one arm
 
 Outputs land in  ...\RUN2\FIGS
@@ -379,6 +379,7 @@ TRANSPLANT = {"JP-MSE": ("Mase", "2012-05-02", "2012-09-12"),
 
 
 def fig_dat_overlay(ts):
+    """v1.6: three panels, one per site, shared DAT axis and shared y axis."""
     cfg = ARMS["POOLED"]
     if not os.path.isfile(cfg["csv"]):
         print(f"  [SKIP DAT] {cfg['csv']} not found"); return
@@ -386,37 +387,44 @@ def fig_dat_overlay(ts):
     if "site" not in d.columns:
         print("  [SKIP DAT] no 'site' column in the pooled CSV"); return
     _, fn, cx = cfg["operative"]
-    pred_all = np.asarray(fn(d), dtype=float)
-    d = d.assign(__pred__=pred_all)
-    fig, ax = plt.subplots(figsize=(9.5, 4.6))
+    d = d.assign(__pred__=np.asarray(fn(d), dtype=float))
+    order = [c for c in ["JP-MSE", "PH-IR", "SK-CRK"] if c in set(d["site"])]
+    fig, axes = plt.subplots(1, len(order), figsize=(11.6, 3.9), sharey=True)
+    if len(order) == 1:
+        axes = [axes]
     roll = lambda v: pd.Series(v).rolling(336, min_periods=48, center=True).mean()
-    for code, (name, t0, harvest) in TRANSPLANT.items():
+    for j, (ax, code) in enumerate(zip(axes, order)):
+        name, t0, harvest = TRANSPLANT[code]
         sub = d[d["site"] == code]
-        if not len(sub):
-            continue
         key = "MASE" if name == "Mase" else ("IRRI" if name == "IRRI" else "CHEORWON")
         y = pd.to_numeric(sub[TARGET], errors="coerce").to_numpy(float)
+        r2 = stats(y, sub["__pred__"].to_numpy(float))[0]
         tt, (yy, pp) = _grid(sub["__date__"], y, sub["__pred__"].to_numpy(float))
         dat = ((tt - pd.Timestamp(t0)) / pd.Timedelta(days=1)).to_numpy(float)
         w = (dat >= -25) & (dat <= 165)
-        ry, rp = roll(yy).to_numpy(float), roll(pp).to_numpy(float)
-        ax.plot(dat[w], ry[w], color=COLOR[key], lw=1.7, label=f"{name}, observed")
-        ax.plot(dat[w], rp[w], color=COLOR[key], lw=1.4, ls="--", alpha=0.9)
+        ax.plot(dat[w], roll(yy).to_numpy(float)[w], color=COLOR[key], lw=1.7)
+        ax.plot(dat[w], roll(pp).to_numpy(float)[w], color=COLOR[key], lw=1.4,
+                ls="--", alpha=0.9)
+        ax.axvline(0, color="#555555", ls="--", lw=1.1)
         if harvest:
             hv = (pd.Timestamp(harvest) - pd.Timestamp(t0)).days
-            ax.axvline(hv, color=COLOR[key], ls=":", lw=1.1, alpha=0.8)
-    ax.axvline(0, color="#555555", ls="--", lw=1.2)
-    ax.annotate("transplanting", xy=(0, 0.97), xycoords=("data", "axes fraction"),
-                fontsize=8, color="#555555", ha="left", xytext=(2, 0),
-                textcoords="offset points")
-    ax.plot([], [], color="#555555", lw=1.4, ls="--",
-            label="pooled equation (dashed)")
-    ax.plot([], [], color="#555555", lw=1.1, ls=":", label="harvest")
-    ax.set_xlabel("days after transplanting (DAT)", fontsize=10)
-    ax.set_ylabel("CH$_4$ (mg m$^{-2}$ h$^{-1}$), 7-day rolling mean", fontsize=9)
-    ax.legend(fontsize=8, frameon=False, ncol=2)
-    ax.set_xlim(-25, 165)
-    ax.tick_params(labelsize=8)
+            ax.axvline(hv, color="#555555", ls=":", lw=1.2)
+        ax.annotate(f"{name}  (R$^2$={r2:.2f})", xy=(0.04, 0.92),
+                    xycoords="axes fraction", fontsize=8.5, fontweight="semibold")
+        if j == 0:
+            ax.set_ylabel("CH$_4$ (mg m$^{-2}$ h$^{-1}$), 7-day rolling mean",
+                          fontsize=8.5)
+            ax.annotate("transplanting", xy=(0, 0.03),
+                        xycoords=("data", "axes fraction"), fontsize=7.2,
+                        color="#555555", ha="left", xytext=(3, 0),
+                        textcoords="offset points")
+        ax.set_xlim(-25, 165)
+        ax.set_xlabel("days after transplanting (DAT)", fontsize=9)
+        ax.tick_params(labelsize=7.5)
+    axes[-1].plot([], [], color="#555555", lw=1.7, label="observed, 7-day mean")
+    axes[-1].plot([], [], color="#555555", lw=1.4, ls="--", label="pooled equation")
+    axes[-1].plot([], [], color="#555555", lw=1.2, ls=":", label="harvest")
+    axes[-1].legend(fontsize=7, frameon=False, loc="upper right")
     fig.tight_layout()
     for out in (os.path.join(OUT, f"ch4_DAT_overlay_{ts}.png"),
                 os.path.join(OUT, "ch4_DAT_overlay.png")):
