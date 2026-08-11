@@ -45,7 +45,14 @@ established across the twelve seeds, not by replaying one.
 - **IRRI 2016 record and all tables derived from it (PHL, POOLED)**: the
   authors' own measurement, available on reasonable request; not part of this
   repository. Contact the corresponding author.
+ - Water depth and depth-derived predictors are in cm; the paper's fitted coefficients assume this convention.
 
 ## Citation
 
-See CITATION.cff. A Zenodo DOI is minted per tagged release.
+If you use this code or data, cite the paper and this repository. Full author list in CITATION.cff.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21893634.svg)](https://doi.org/10.5281/zenodo.21893634)
+
+> Zerrudo, J., et al. (2026). PySRRiceMethane: symbolic regression pipeline and results
+> for rice-paddy CH4 flux equations across three Asian sites (v1.0.0). Zenodo.
+> https://doi.org/10.5281/zenodo.21893634
