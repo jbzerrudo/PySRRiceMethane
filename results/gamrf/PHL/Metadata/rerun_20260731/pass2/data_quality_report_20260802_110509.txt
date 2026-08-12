@@ -1,0 +1,29 @@
+Data Quality Report for F_CH4_F
+Generated at: 2026-08-02 11:20:12
+======================================================================
+Rows total: 3,620
+Target non-NA: 3,620
+
+Predictor completeness:
+  AUC_dry             :    3620 (100.0%)
+  hwet                :    3620 (100.0%)
+  h*VPD               :    3620 (100.0%)
+  Tv_K                :    3620 (100.0%)
+  uzonal              :    3620 (100.0%)
+  h_ASINH_cm          :    3620 (100.0%)
+  h_inv               :    3620 (100.0%)
+  SR*Ts               :    3620 (100.0%)
+  SR*HODsin           :    3620 (100.0%)
+  h*sinTOD            :    3620 (100.0%)
+
+Simple outlier counts (IQR rule):
+  AUC_dry             :       0
+  hwet                :     552
+  h*VPD               :     217
+  Tv_K                :       2
+  uzonal              :      11
+  h_ASINH_cm          :     343
+  h_inv               :    1017
+  SR*Ts               :     195
+  SR*HODsin           :    1679
+  h*sinTOD            :     157

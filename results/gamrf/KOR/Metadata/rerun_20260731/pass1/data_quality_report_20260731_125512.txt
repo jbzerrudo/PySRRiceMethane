@@ -1,0 +1,117 @@
+Data Quality Report for F_CH4_F
+Generated at: 2026-07-31 16:59:03
+======================================================================
+Rows total: 8,365
+Target non-NA: 8,365
+
+Predictor completeness:
+  dayhr               :    8365 (100.0%)
+  depth               :    8365 (100.0%)
+  AUC_wet             :    8365 (100.0%)
+  rate                :    8364 (100.0%)
+  Tair                :    8365 (100.0%)
+  Tsoil               :    8278 ( 99.0%)
+  SR                  :    8365 (100.0%)
+  Patm                :    8365 (100.0%)
+  WS                  :    8365 (100.0%)
+  WD                  :    8365 (100.0%)
+  RH                  :    8365 (100.0%)
+  es                  :    8365 (100.0%)
+  VPD                 :    8365 (100.0%)
+  rate_P              :    8364 (100.0%)
+  Tdew                :    8365 (100.0%)
+  q                   :    8365 (100.0%)
+  wmix                :    8365 (100.0%)
+  h*Ta                :    8365 (100.0%)
+  h*Ts                :    8278 ( 99.0%)
+  h*WS                :    8365 (100.0%)
+  h*Pr                :    8365 (100.0%)
+  h*VPD               :    8365 (100.0%)
+  Tv_K                :    8365 (100.0%)
+  rho_moist           :    8365 (100.0%)
+  uzonal              :    8365 (100.0%)
+  vmerid              :    8365 (100.0%)
+  buoy_TsTa           :    8278 ( 99.0%)
+  SRxWS               :    8365 (100.0%)
+  SR*u                :    8365 (100.0%)
+  SR*v                :    8365 (100.0%)
+  SR*VPD              :    8365 (100.0%)
+  VPD*WS              :    8365 (100.0%)
+  q*WS                :    8365 (100.0%)
+  h_ASINH_cm          :    8365 (100.0%)
+  h_inv               :    8365 (100.0%)
+  u*VPD               :    8365 (100.0%)
+  v*VPD               :    8365 (100.0%)
+  rate*Ta             :    8364 (100.0%)
+  rate*Ts             :    8277 ( 98.9%)
+  SR*Ta               :    8365 (100.0%)
+  SR*Ts               :    8278 ( 99.0%)
+  SR*HODsin           :    8365 (100.0%)
+  VPD*WS*d1sin        :    8365 (100.0%)
+  q/rho               :    8365 (100.0%)
+  asinh_Ta            :    8365 (100.0%)
+  asinh_Ts            :    8278 ( 99.0%)
+  asinh_WS            :    8365 (100.0%)
+  asinh_SR            :    8365 (100.0%)
+  asinh_P_kPa         :    8365 (100.0%)
+  asinh_rate_h        :    8364 (100.0%)
+  h*sinTOD            :    8365 (100.0%)
+  h*cosTOD            :    8365 (100.0%)
+  h*u                 :    8365 (100.0%)
+  h*v                 :    8365 (100.0%)
+
+Simple outlier counts (IQR rule):
+  dayhr               :       0
+  depth               :      18
+  AUC_wet             :       0
+  rate                :    1800
+  Tair                :      58
+  Tsoil               :      20
+  SR                  :       0
+  Patm                :      44
+  WS                  :     178
+  WD                  :       0
+  RH                  :       0
+  es                  :      88
+  VPD                 :      33
+  rate_P              :     174
+  Tdew                :      45
+  q                   :       0
+  wmix                :       0
+  h*Ta                :      22
+  h*Ts                :      23
+  h*WS                :     564
+  h*Pr                :      18
+  h*VPD               :     909
+  Tv_K                :      35
+  rho_moist           :      34
+  uzonal              :     706
+  vmerid              :     193
+  buoy_TsTa           :      82
+  SRxWS               :     922
+  SR*u                :    2395
+  SR*v                :    3256
+  SR*VPD              :    1047
+  VPD*WS              :     668
+  q*WS                :     319
+  h_ASINH_cm          :       0
+  h_inv               :       0
+  u*VPD               :    2391
+  v*VPD               :    2371
+  rate*Ta             :    1880
+  rate*Ts             :    1806
+  SR*Ta               :     349
+  SR*Ts               :     353
+  SR*HODsin           :    2883
+  VPD*WS*d1sin        :    1461
+  q/rho               :       0
+  asinh_Ta            :     398
+  asinh_Ts            :     268
+  asinh_WS            :       0
+  asinh_SR            :       0
+  asinh_P_kPa         :      45
+  asinh_rate_h        :    1794
+  h*sinTOD            :    1225
+  h*cosTOD            :    1141
+  h*u                 :    2051
+  h*v                 :    1894

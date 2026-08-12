@@ -1,0 +1,46 @@
+================================================================================
+  GAM EQUATION REPORT FOR: F_CH4_F
+  Generated at: 2026-08-02 11:50:09
+================================================================================
+
+  FULL MODEL EQUATION (all terms):
+    F_CH4_F = 5.5033 + s(dayhr) + s(depth) + s(WD) + s(Tv_K) + s(SR*u) + s(SR*v) + s(VPD*WS) + s(h_inv) + s(u*VPD) + s(SR*Ta) + s(SR*HODsin) + s(h*sinTOD) + s(h*cosTOD) + s(h*v) + s(hbar_wet)
+  Number of terms: 15
+
+  TERM DETAILS:
+  Term                           EDF      p-value    Sig
+  -------------------------------------------------------
+  s(dayhr                 )     9.22     5.15e-07    ***
+  s(depth                 )     6.75     3.33e-07    ***
+  s(WD                    )     8.02     1.11e-16    ***
+  s(Tv_K                  )     6.93     1.11e-16    ***
+  s(SR*u                  )     5.78     2.22e-16    ***
+  s(SR*v                  )     5.75     1.11e-16    ***
+  s(VPD*WS                )     6.49        9e-11    ***
+  s(h_inv                 )     2.69     1.11e-16    ***
+  s(u*VPD                 )     5.11     8.87e-09    ***
+  s(SR*Ta                 )     7.02     1.11e-16    ***
+  s(SR*HODsin             )     6.84     3.59e-11    ***
+  s(h*sinTOD              )     6.05       0.0191      *
+  s(h*cosTOD              )     4.79     1.05e-11    ***
+  s(h*v                   )     5.56     5.95e-13    ***
+  s(hbar_wet              )     7.67     1.11e-16    ***
+  -------------------------------------------------------
+  Sig. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+  PARSIMONIOUS EQUATION (p < 0.05):
+  F_CH4_F = 5.5033 + s(dayhr) + s(depth) + s(WD) + s(Tv_K) + s(SR*u) + s(SR*v) + s(VPD*WS) + s(h_inv) + s(u*VPD) + s(SR*Ta) + s(SR*HODsin) + s(h*sinTOD) + s(h*cosTOD) + s(h*v) + s(hbar_wet)
+  Significant terms: 15 / 15
+
+  MODEL STATISTICS:
+    AIC                      : 87065.6332
+    AICc                     : 87066.8846
+    GCV                      : 20.4409
+    scale                    : 4.4952
+    loglikelihood            : -43437.1312
+    deviance                 : 14787.3146
+    R² (explained_deviance)  : 0.5582
+    R² (McFadden)            : 0.8230
+    R² (McFadden_adj)        : 0.1752
+    Effective DoF            : 94.69
+================================================================================

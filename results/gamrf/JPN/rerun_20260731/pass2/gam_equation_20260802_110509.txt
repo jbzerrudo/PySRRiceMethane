@@ -1,0 +1,41 @@
+================================================================================
+  GAM EQUATION REPORT FOR: F_CH4_F
+  Generated at: 2026-08-02 11:37:21
+================================================================================
+
+  FULL MODEL EQUATION (all terms):
+    F_CH4_F = 1.1893 + s(AUC_wet) + s(WD) + s(h*Pr) + s(Tv_K) + s(uzonal) + s(vmerid) + s(VPD*WS) + s(u*VPD) + s(SR*HODsin) + s(VPD*WS*d1sin)
+  Number of terms: 10
+
+  TERM DETAILS:
+  Term                           EDF      p-value    Sig
+  -------------------------------------------------------
+  s(AUC_wet               )     8.80     1.11e-16    ***
+  s(WD                    )     7.21        0.026      *
+  s(h*Pr                  )     6.55     1.63e-05    ***
+  s(Tv_K                  )     6.78     1.11e-16    ***
+  s(uzonal                )     6.09     9.01e-07    ***
+  s(vmerid                )     5.66        0.979       
+  s(VPD*WS                )     6.25        0.655       
+  s(u*VPD                 )     4.61     1.11e-16    ***
+  s(SR*HODsin             )     6.68     0.000942    ***
+  s(VPD*WS*d1sin          )     5.26       0.0294      *
+  -------------------------------------------------------
+  Sig. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+  PARSIMONIOUS EQUATION (p < 0.05):
+  F_CH4_F = 1.1893 + s(AUC_wet) + s(WD) + s(h*Pr) + s(Tv_K) + s(uzonal) + s(u*VPD) + s(SR*HODsin) + s(VPD*WS*d1sin)
+  Significant terms: 8 / 10
+
+  MODEL STATISTICS:
+    AIC                      : 29302.4185
+    AICc                     : 29304.0191
+    GCV                      : 13.3132
+    scale                    : 3.6098
+    loglikelihood            : -14586.3147
+    deviance                 : 5345.1054
+    R² (explained_deviance)  : 0.4863
+    R² (McFadden)            : 0.8522
+    R² (McFadden_adj)        : 0.1441
+    Effective DoF            : 63.89
+================================================================================

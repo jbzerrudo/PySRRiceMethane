@@ -1,0 +1,30 @@
+========================================================================
+  ENSEMBLE FEATURE SELECTION — IMPORTANT VARIABLES
+  Generated at: 2026-08-02 11:20:12
+  Method: Union of PIMP (Altmann et al., 2010) and Boruta
+          (Kursa & Rudnicki, 2010) per Saeys et al. (2008)
+========================================================================
+
+  Total predictors evaluated : 10
+  Confirmed (both methods)   : 4
+  Supported (one method)     : 6
+  Rejected  (neither)        : 0
+  Important set (union)      : 10
+
+------------------------------------------------------------------------
+  Predictor                 Consensus    PIMP           Boruta                PermImp
+------------------------------------------------------------------------
+  ✓ hwet                      Supported    p=0.005        Rejected (0%)            7.15
+  ✓ h_ASINH_cm                Supported    p=0.005        Rejected (1%)            5.46
+  ✓ AUC_dry                   Confirmed    p=0.005        Confirmed (20%)          2.43
+  ✓ h*VPD                     Supported    p=0.005        Rejected (0%)            1.11
+  ✓ Tv_K                      Confirmed    p=0.005        Confirmed (20%)          0.29
+  ✓ SR*Ts                     Confirmed    p=0.015        Confirmed (20%)          0.06
+  ✓ SR*HODsin                 Supported    p=0.005        Tentative (49%)          0.05
+  ✓ uzonal                    Confirmed    p=0.005        Confirmed (20%)          0.04
+  ✓ h*sinTOD                  Supported    p=0.448        Confirmed (20%)          0.00
+  ✓ h_inv                     Supported    p=0.945        Confirmed (20%)         -0.00
+------------------------------------------------------------------------
+
+  → Carry the 10 important variables to the collinearity checker.
+========================================================================

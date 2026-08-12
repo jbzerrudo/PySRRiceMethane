@@ -1,0 +1,52 @@
+================================================================================
+  GAM EQUATION REPORT FOR: F_CH4_F
+  Generated at: 2026-08-02 12:08:05
+================================================================================
+
+  FULL MODEL EQUATION (all terms):
+    F_CH4_F = 2.9651 + s(dayhr) + s(AUC_wet) + s(SR) + s(WD) + s(rate_P) + s(h*Pr) + s(Tv_K) + s(vmerid) + s(SR*u) + s(SR*v) + s(h_inv) + s(u*VPD) + s(v*VPD) + s(SR*HODsin) + s(VPD*WS*d1sin) + s(asinh_P_kPa) + s(h*sinTOD) + s(h*cosTOD)
+  Number of terms: 18
+
+  TERM DETAILS:
+  Term                           EDF      p-value    Sig
+  -------------------------------------------------------
+  s(dayhr                 )     8.82     2.41e-08    ***
+  s(AUC_wet               )     7.74     1.11e-16    ***
+  s(SR                    )     7.18     2.17e-10    ***
+  s(WD                    )     7.50     2.19e-12    ***
+  s(rate_P                )     4.22        0.599       
+  s(h*Pr                  )     6.41     8.49e-06    ***
+  s(Tv_K                  )     6.74     1.11e-16    ***
+  s(vmerid                )     6.05      0.00141     **
+  s(SR*u                  )     5.51     0.000282    ***
+  s(SR*v                  )     5.75     3.14e-09    ***
+  s(h_inv                 )     2.77      0.00199     **
+  s(u*VPD                 )     5.52        0.283       
+  s(v*VPD                 )     5.65     1.47e-07    ***
+  s(SR*HODsin             )     6.34     4.43e-06    ***
+  s(VPD*WS*d1sin          )     5.32        0.473       
+  s(asinh_P_kPa           )     6.51     1.11e-16    ***
+  s(h*sinTOD              )     5.50     4.45e-05    ***
+  s(h*cosTOD              )     3.79     2.07e-05    ***
+  -------------------------------------------------------
+  Sig. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+  PARSIMONIOUS EQUATION (p < 0.05):
+  ⚠ WARNING: 18 predictors — p-values are unreliable
+    with this many correlated terms. Run collinearity screening
+    first, then interpret significance from the reduced model.
+  F_CH4_F = 2.9651 + s(dayhr) + s(AUC_wet) + s(SR) + s(WD) + s(h*Pr) + s(Tv_K) + s(vmerid) + s(SR*u) + s(SR*v) + s(h_inv) + s(v*VPD) + s(SR*HODsin) + s(asinh_P_kPa) + s(h*sinTOD) + s(h*cosTOD)
+  Significant terms: 15 / 18
+
+  MODEL STATISTICS:
+    AIC                      : 38302.0269
+    AICc                     : 38305.6261
+    GCV                      : 18.1641
+    scale                    : 4.2000
+    loglikelihood            : -19042.6805
+    deviance                 : 6583.6671
+    R² (explained_deviance)  : 0.7089
+    R² (McFadden)            : 0.7037
+    R² (McFadden_adj)        : 0.2923
+    Effective DoF            : 107.33
+================================================================================

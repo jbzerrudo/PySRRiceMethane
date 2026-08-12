@@ -1,0 +1,459 @@
+========================================================================
+  COLLINEARITY ANALYSIS REPORT
+  Site             : IRRI
+  Target variable  : F_CH4_F
+  VIF threshold    : 5.0
+  VIF definition   : standard (intercept in design)
+  Observations     : 3620
+  Initial features : 20
+  Retained         : 10
+  Dropped by VIF   : 10
+  Drop strategy    : Importance-guided (least important above VIF threshold)
+  Generated        : 2026-08-02 10:53:30
+========================================================================
+
+------------------------------------------------------------------------
+  PRE-REGISTERED DECLARATIONS
+------------------------------------------------------------------------
+  Box (0) removed by declaration : none
+  PROTECTED (never dropped)      : none
+  Importance source              : C:\Users\zerru001\OneDrive - Wageningen University & Research\Paper1\RUN2\GAMRF\PHL\rerun_20260731\pass1\predictor_perm_importance_20260731_125512.csv
+  Missing importance is fatal    : True
+
+------------------------------------------------------------------------
+  INITIAL VIF SCORES (after box 0, before elimination)
+------------------------------------------------------------------------
+  Tv_K                            VIF = 28109602.33 *** ABOVE THRESHOLD
+  Tair                            VIF = 24292907.50 *** ABOVE THRESHOLD
+  es                              VIF = 1826063.02 *** ABOVE THRESHOLD
+  VPD                             VIF = 1294540.14 *** ABOVE THRESHOLD
+  asinh_Ta                        VIF =   30696.33 *** ABOVE THRESHOLD
+  RH                              VIF =    3527.77 *** ABOVE THRESHOLD
+  rho_moist                       VIF =    3180.32 *** ABOVE THRESHOLD
+  SR*Ts                           VIF =      77.32 *** ABOVE THRESHOLD
+  SR*VPD                          VIF =      64.66 *** ABOVE THRESHOLD
+  SRxWS                           VIF =      48.18 *** ABOVE THRESHOLD
+  VPD*WS                          VIF =      26.10 *** ABOVE THRESHOLD
+  SR*u                            VIF =      11.43 *** ABOVE THRESHOLD
+  uzonal                          VIF =       5.44 *** ABOVE THRESHOLD
+  h_ASINH_cm                      VIF =       4.84
+  h*VPD                           VIF =       3.38
+  hwet                            VIF =       2.95
+  SR*HODsin                       VIF =       2.65
+  h*sinTOD                        VIF =       1.48
+  AUC_dry                         VIF =       1.45
+  h_inv                           VIF =       1.00
+
+------------------------------------------------------------------------
+  STEPWISE VIF ELIMINATION LOG
+------------------------------------------------------------------------
+
+  Iteration 1
+  Feature                                VIF
+  ------------------------------  ----------
+  Tv_K                            28109602.33
+  Tair                            24292907.50
+  es                              1826063.02
+  VPD                             1294540.14
+  asinh_Ta                          30696.33
+  RH                                 3527.77
+  rho_moist                          3180.32
+  SR*Ts                                77.32
+  SR*VPD                               64.66
+  SRxWS                                48.18
+  VPD*WS                               26.10
+  SR*u                                 11.43 <-- DROPPED
+  uzonal                                5.44
+  h_ASINH_cm                            4.84
+  h*VPD                                 3.38
+  hwet                                  2.95
+  SR*HODsin                             2.65
+  h*sinTOD                              1.48
+  AUC_dry                               1.45
+  h_inv                                 1.00
+
+  Action: Dropped 'SR*u' (VIF = 11.43)
+  Strategy: importance-guided (least important above VIF threshold; importance=0.01767)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - SRxWS (|r| = 0.908)
+            - VPD*WS (|r| = 0.804)
+            - uzonal (|r| = 0.764)
+
+  Iteration 2
+  Feature                                VIF
+  ------------------------------  ----------
+  Tv_K                            28109381.96
+  Tair                            24292712.38
+  es                              1825783.39
+  VPD                             1294516.21
+  asinh_Ta                          30479.24
+  RH                                 3526.00
+  rho_moist                          3180.27
+  SR*Ts                                63.38
+  SR*VPD                               60.71
+  SRxWS                                24.20
+  VPD*WS                               23.18 <-- DROPPED
+  h_ASINH_cm                            4.84
+  uzonal                                3.57
+  h*VPD                                 3.38
+  hwet                                  2.95
+  SR*HODsin                             2.65
+  h*sinTOD                              1.48
+  AUC_dry                               1.44
+  h_inv                                 1.00
+
+  Action: Dropped 'VPD*WS' (VIF = 23.18)
+  Strategy: importance-guided (least important above VIF threshold; importance=0.03242)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - SRxWS (|r| = 0.870)
+            - RH (|r| = 0.851)
+            - VPD (|r| = 0.842)
+
+  Iteration 3
+  Feature                                VIF
+  ------------------------------  ----------
+  Tv_K                            27972002.29
+  Tair                            24203485.61
+  es                              1812466.23
+  VPD                             1287388.76
+  asinh_Ta                          29961.55
+  RH                                 3494.13
+  rho_moist                          3155.23 <-- DROPPED
+  SR*VPD                               60.70
+  SR*Ts                                58.71
+  SRxWS                                12.39
+  h_ASINH_cm                            4.82
+  h*VPD                                 3.34
+  hwet                                  2.94
+  uzonal                                2.79
+  SR*HODsin                             2.34
+  h*sinTOD                              1.47
+  AUC_dry                               1.41
+  h_inv                                 1.00
+
+  Action: Dropped 'rho_moist' (VIF = 3155.23)
+  Strategy: importance-guided (least important above VIF threshold; importance=0.3582)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - Tv_K (|r| = 0.980)
+            - Tair (|r| = 0.975)
+            - es (|r| = 0.974)
+
+  Iteration 4
+  Feature                                VIF
+  ------------------------------  ----------
+  Tair                             547718.95
+  Tv_K                             398391.98
+  es                                33979.31
+  asinh_Ta                          29925.07
+  VPD                               18627.49
+  RH                                  318.16
+  SR*VPD                               60.46
+  SR*Ts                                57.96
+  SRxWS                                12.27 <-- DROPPED
+  h_ASINH_cm                            4.79
+  h*VPD                                 3.34
+  hwet                                  2.91
+  uzonal                                2.78
+  SR*HODsin                             2.32
+  h*sinTOD                              1.47
+  AUC_dry                               1.41
+  h_inv                                 1.00
+
+  Action: Dropped 'SRxWS' (VIF = 12.27)
+  Strategy: importance-guided (least important above VIF threshold; importance=0.3859)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - SR*Ts (|r| = 0.910)
+            - SR*VPD (|r| = 0.872)
+            - VPD (|r| = 0.690)
+
+  Iteration 5
+  Feature                                VIF
+  ------------------------------  ----------
+  Tair                             541955.91
+  Tv_K                             398001.52
+  es                                33189.58
+  asinh_Ta                          29226.33
+  VPD                               18625.80
+  RH                                  314.61
+  SR*VPD                               59.90 <-- DROPPED
+  SR*Ts                                49.57
+  h_ASINH_cm                            4.79
+  h*VPD                                 3.33
+  hwet                                  2.91
+  uzonal                                2.25
+  SR*HODsin                             2.08
+  h*sinTOD                              1.47
+  AUC_dry                               1.41
+  h_inv                                 1.00
+
+  Action: Dropped 'SR*VPD' (VIF = 59.90)
+  Strategy: importance-guided (least important above VIF threshold; importance=0.9205)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - SR*Ts (|r| = 0.972)
+            - VPD (|r| = 0.834)
+            - es (|r| = 0.815)
+
+  Iteration 6
+  Feature                                VIF
+  ------------------------------  ----------
+  Tair                             523911.76
+  Tv_K                             395655.33
+  es                                32853.02
+  asinh_Ta                          26332.21
+  VPD                               18056.71
+  RH                                  246.48 <-- DROPPED
+  h_ASINH_cm                            4.79
+  SR*Ts                                 4.36
+  h*VPD                                 3.33
+  hwet                                  2.91
+  uzonal                                2.17
+  SR*HODsin                             2.08
+  h*sinTOD                              1.47
+  AUC_dry                               1.40
+  h_inv                                 1.00
+
+  Action: Dropped 'RH' (VIF = 246.48)
+  Strategy: importance-guided (least important above VIF threshold; importance=8.658)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - VPD (|r| = 0.983)
+            - es (|r| = 0.894)
+            - Tair (|r| = 0.892)
+
+  Iteration 7
+  Feature                                VIF
+  ------------------------------  ----------
+  Tair                             517764.85
+  Tv_K                             375825.59
+  es                                26522.08
+  asinh_Ta                          26077.97 <-- DROPPED
+  VPD                               15501.65
+  h_ASINH_cm                            4.78
+  SR*Ts                                 4.36
+  h*VPD                                 3.32
+  hwet                                  2.89
+  uzonal                                2.09
+  SR*HODsin                             1.91
+  h*sinTOD                              1.45
+  AUC_dry                               1.40
+  h_inv                                 1.00
+
+  Action: Dropped 'asinh_Ta' (VIF = 26077.97)
+  Strategy: importance-guided (least important above VIF threshold; importance=34.43)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - Tair (|r| = 0.999)
+            - Tv_K (|r| = 0.997)
+            - es (|r| = 0.992)
+
+  Iteration 8
+  Feature                                VIF
+  ------------------------------  ----------
+  Tv_K                             341447.25
+  Tair                             306400.29
+  es                                20402.52
+  VPD                               14088.58 <-- DROPPED
+  h_ASINH_cm                            4.75
+  SR*Ts                                 4.21
+  h*VPD                                 3.27
+  hwet                                  2.87
+  uzonal                                1.92
+  SR*HODsin                             1.75
+  h*sinTOD                              1.44
+  AUC_dry                               1.40
+  h_inv                                 1.00
+
+  Action: Dropped 'VPD' (VIF = 14088.58)
+  Strategy: importance-guided (least important above VIF threshold; importance=194.5)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - es (|r| = 0.944)
+            - Tair (|r| = 0.935)
+            - Tv_K (|r| = 0.910)
+
+  Iteration 9
+  Feature                                VIF
+  ------------------------------  ----------
+  Tair                                775.44
+  es                                  330.73 <-- DROPPED
+  Tv_K                                320.35
+  h_ASINH_cm                            4.49
+  SR*Ts                                 3.90
+  h*VPD                                 3.26
+  hwet                                  2.87
+  uzonal                                1.92
+  SR*HODsin                             1.61
+  h*sinTOD                              1.44
+  AUC_dry                               1.37
+  h_inv                                 1.00
+
+  Action: Dropped 'es' (VIF = 330.73)
+  Strategy: importance-guided (least important above VIF threshold; importance=204.6)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - Tair (|r| = 0.997)
+            - Tv_K (|r| = 0.994)
+            - SR*Ts (|r| = 0.802)
+
+  Iteration 10
+  Feature                                VIF
+  ------------------------------  ----------
+  Tair                                331.47 <-- DROPPED
+  Tv_K                                307.07
+  h_ASINH_cm                            4.47
+  SR*Ts                                 3.25
+  h*VPD                                 3.14
+  hwet                                  2.87
+  uzonal                                1.68
+  h*sinTOD                              1.43
+  AUC_dry                               1.35
+  SR*HODsin                             1.33
+  h_inv                                 1.00
+
+  Action: Dropped 'Tair' (VIF = 331.47)
+  Strategy: importance-guided (least important above VIF threshold; importance=1173)
+  Reason: VIF exceeds threshold of 5.0. High multicollinearity
+          with the following REMAINING variables:
+            - Tv_K (|r| = 0.998)
+            - SR*Ts (|r| = 0.790)
+            - uzonal (|r| = 0.476)
+
+  Iteration 11
+  Feature                                VIF
+  ------------------------------  ----------
+  h_ASINH_cm                            4.43
+  Tv_K                                  3.16
+  SR*Ts                                 3.14
+  h*VPD                                 2.96
+  hwet                                  2.87
+  uzonal                                1.51
+  h*sinTOD                              1.41
+  AUC_dry                               1.35
+  SR*HODsin                             1.26
+  h_inv                                 1.00
+
+  Action: None. All remaining VIFs <= 5.0.
+
+------------------------------------------------------------------------
+  DROPPED VARIABLES SUMMARY
+------------------------------------------------------------------------
+
+  1. SR*u
+     VIF at removal : 11.43
+     Top correlates : SRxWS (|r|=0.908), VPD*WS (|r|=0.804), uzonal (|r|=0.764)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+  2. VPD*WS
+     VIF at removal : 23.18
+     Top correlates : SRxWS (|r|=0.870), RH (|r|=0.851), VPD (|r|=0.842)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+  3. rho_moist
+     VIF at removal : 3155.23
+     Top correlates : Tv_K (|r|=0.980), Tair (|r|=0.975), es (|r|=0.974)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+  4. SRxWS
+     VIF at removal : 12.27
+     Top correlates : SR*Ts (|r|=0.910), SR*VPD (|r|=0.872), VPD (|r|=0.690)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+  5. SR*VPD
+     VIF at removal : 59.90
+     Top correlates : SR*Ts (|r|=0.972), VPD (|r|=0.834), es (|r|=0.815)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+  6. RH
+     VIF at removal : 246.48
+     Top correlates : VPD (|r|=0.983), es (|r|=0.894), Tair (|r|=0.892)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+  7. asinh_Ta
+     VIF at removal : 26077.97
+     Top correlates : Tair (|r|=0.999), Tv_K (|r|=0.997), es (|r|=0.992)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+  8. VPD
+     VIF at removal : 14088.58
+     Top correlates : es (|r|=0.944), Tair (|r|=0.935), Tv_K (|r|=0.910)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+  9. es
+     VIF at removal : 330.73
+     Top correlates : Tair (|r|=0.997), Tv_K (|r|=0.994), SR*Ts (|r|=0.802)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+  10. Tair
+     VIF at removal : 331.47
+     Top correlates : Tv_K (|r|=0.998), SR*Ts (|r|=0.790), uzonal (|r|=0.476)
+     Verdict        : Redundant; variance largely explained by other predictors.
+
+------------------------------------------------------------------------
+  RETAINED VARIABLES SUMMARY
+------------------------------------------------------------------------
+
+  h_ASINH_cm
+     Final VIF : 4.43
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  Tv_K
+     Final VIF : 3.16
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  SR*Ts
+     Final VIF : 3.14
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  h*VPD
+     Final VIF : 2.96
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  hwet
+     Final VIF : 2.87
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  uzonal
+     Final VIF : 1.51
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  h*sinTOD
+     Final VIF : 1.41
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  AUC_dry
+     Final VIF : 1.35
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  SR*HODsin
+     Final VIF : 1.26
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  h_inv
+     Final VIF : 1.00
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+------------------------------------------------------------------------
+  COVERAGE DIAGNOSTIC
+------------------------------------------------------------------------
+  water   survivors : ['AUC_dry', 'hwet', 'h_ASINH_cm', 'h_inv']
+  thermal survivors : ['Tv_K']
+  coverage rule     : satisfied
+
+========================================================================
+  END OF REPORT
+========================================================================

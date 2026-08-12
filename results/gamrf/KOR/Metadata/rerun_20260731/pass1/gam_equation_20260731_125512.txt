@@ -1,0 +1,88 @@
+================================================================================
+  GAM EQUATION REPORT FOR: F_CH4_F
+  Generated at: 2026-07-31 16:59:03
+================================================================================
+
+  FULL MODEL EQUATION (all terms):
+    F_CH4_F = 23.7641 + s(dayhr) + s(depth) + s(AUC_wet) + s(rate) + s(Tair) + s(Tsoil) + s(SR) + s(Patm) + s(WS) + s(WD) + s(RH) + s(es) + s(VPD) + s(rate_P) + s(Tdew) + s(q) + s(wmix) + s(h*Ta) + s(h*Ts) + s(h*WS) + s(h*Pr) + s(h*VPD) + s(Tv_K) + s(rho_moist) + s(uzonal) + s(vmerid) + s(buoy_TsTa) + s(SRxWS) + s(SR*u) + s(SR*v) + s(SR*VPD) + s(VPD*WS) + s(q*WS) + s(h_ASINH_cm) + s(h_inv) + s(u*VPD) + s(v*VPD) + s(rate*Ta) + s(rate*Ts) + s(SR*Ta) + s(SR*Ts) + s(SR*HODsin) + s(VPD*WS*d1sin) + s(q/rho) + s(asinh_Ta) + s(asinh_Ts) + s(asinh_WS) + s(asinh_SR) + s(asinh_P_kPa) + s(asinh_rate_h) + s(h*sinTOD) + s(h*cosTOD) + s(h*u) + s(h*v)
+  Number of terms: 54
+
+  TERM DETAILS:
+  Term                           EDF      p-value    Sig
+  -------------------------------------------------------
+  s(dayhr                 )     8.88     0.000108    ***
+  s(depth                 )     7.72     1.11e-16    ***
+  s(AUC_wet               )     8.04     1.11e-16    ***
+  s(rate                  )     6.67        0.364       
+  s(Tair                  )     8.59     1.07e-05    ***
+  s(Tsoil                 )     7.70     1.93e-08    ***
+  s(SR                    )     7.61     6.87e-08    ***
+  s(Patm                  )     7.16     1.11e-16    ***
+  s(WS                    )     7.90        0.296       
+  s(WD                    )     7.52     3.57e-05    ***
+  s(RH                    )     7.50     0.000416    ***
+  s(es                    )     2.23     3.72e-08    ***
+  s(VPD                   )     5.91     2.95e-07    ***
+  s(rate_P                )     4.12        0.697       
+  s(Tdew                  )     6.03     8.19e-10    ***
+  s(q                     )     3.18     0.000161    ***
+  s(wmix                  )     0.88     3.49e-06    ***
+  s(h*Ta                  )     5.77      0.00445     **
+  s(h*Ts                  )     4.91        0.406       
+  s(h*WS                  )     4.62        0.601       
+  s(h*Pr                  )     1.96     1.11e-16    ***
+  s(h*VPD                 )     5.65        0.408       
+  s(Tv_K                  )     3.28     6.34e-09    ***
+  s(rho_moist             )     2.94     1.43e-05    ***
+  s(uzonal                )     5.51     0.000181    ***
+  s(vmerid                )     4.98      0.00135     **
+  s(buoy_TsTa             )     5.03     1.11e-16    ***
+  s(SRxWS                 )     4.92        0.488       
+  s(SR*u                  )     4.19      0.00147     **
+  s(SR*v                  )     4.28     7.22e-12    ***
+  s(SR*VPD                )     5.83      0.00399     **
+  s(VPD*WS                )     5.50       0.0216      *
+  s(q*WS                  )     5.55        0.524       
+  s(h_ASINH_cm            )     2.41       0.0615      .
+  s(h_inv                 )     2.04     0.000849    ***
+  s(u*VPD                 )     4.61        0.528       
+  s(v*VPD                 )     3.84        0.112       
+  s(rate*Ta               )     1.62        0.994       
+  s(rate*Ts               )     0.85        0.927       
+  s(SR*Ta                 )     6.16     0.000103    ***
+  s(SR*Ts                 )     4.99        0.019      *
+  s(SR*HODsin             )     5.85       0.0243      *
+  s(VPD*WS*d1sin          )     4.47        0.867       
+  s(q/rho                 )     0.24      5.1e-12    ***
+  s(asinh_Ta              )     0.50      0.00207     **
+  s(asinh_Ts              )     0.43     2.62e-06    ***
+  s(asinh_WS              )     1.33        0.191       
+  s(asinh_SR              )     3.08        0.125       
+  s(asinh_P_kPa           )     0.07     1.11e-16    ***
+  s(asinh_rate_h          )     0.47       0.0172      *
+  s(h*sinTOD              )     3.64       0.0396      *
+  s(h*cosTOD              )     2.51         0.38       
+  s(h*u                   )     2.33        0.057      .
+  s(h*v                   )     2.60      0.00193     **
+  -------------------------------------------------------
+  Sig. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+  PARSIMONIOUS EQUATION (p < 0.05):
+  ⚠ WARNING: 54 predictors — p-values are unreliable
+    with this many correlated terms. Run collinearity screening
+    first, then interpret significance from the reduced model.
+  F_CH4_F = 23.7641 + s(dayhr) + s(depth) + s(AUC_wet) + s(Tair) + s(Tsoil) + s(SR) + s(Patm) + s(WD) + s(RH) + s(es) + s(VPD) + s(Tdew) + s(q) + s(wmix) + s(h*Ta) + s(h*Pr) + s(Tv_K) + s(rho_moist) + s(uzonal) + s(vmerid) + s(buoy_TsTa) + s(SR*u) + s(SR*v) + s(SR*VPD) + s(VPD*WS) + s(h_inv) + s(SR*Ta) + s(SR*Ts) + s(SR*HODsin) + s(q/rho) + s(asinh_Ta) + s(asinh_Ts) + s(asinh_P_kPa) + s(asinh_rate_h) + s(h*sinTOD) + s(h*v)
+  Significant terms: 36 / 54
+
+  MODEL STATISTICS:
+    AIC                      : 37306.1066
+    AICc                     : 37323.8751
+    GCV                      : 16.8923
+    scale                    : 3.9761
+    loglikelihood            : -18415.4295
+    deviance                 : 6384.3762
+    R² (explained_deviance)  : 0.7468
+    R² (McFadden)            : 0.6617
+    R² (McFadden_adj)        : 0.3298
+    Effective DoF            : 236.62
+================================================================================

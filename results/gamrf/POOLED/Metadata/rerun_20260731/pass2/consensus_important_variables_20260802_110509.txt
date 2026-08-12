@@ -1,0 +1,35 @@
+========================================================================
+  ENSEMBLE FEATURE SELECTION — IMPORTANT VARIABLES
+  Generated at: 2026-08-02 11:50:09
+  Method: Union of PIMP (Altmann et al., 2010) and Boruta
+          (Kursa & Rudnicki, 2010) per Saeys et al. (2008)
+========================================================================
+
+  Total predictors evaluated : 15
+  Confirmed (both methods)   : 12
+  Supported (one method)     : 3
+  Rejected  (neither)        : 0
+  Important set (union)      : 15
+
+------------------------------------------------------------------------
+  Predictor                 Consensus    PIMP           Boruta                PermImp
+------------------------------------------------------------------------
+  ✓ Tv_K                      Confirmed    p=0.005        Confirmed (100%)         2.31
+  ✓ hbar_wet                  Confirmed    p=0.005        Confirmed (100%)         1.54
+  ✓ h_inv                     Confirmed    p=0.005        Confirmed (100%)         0.17
+  ✓ SR*v                      Confirmed    p=0.005        Confirmed (100%)         0.17
+  ✓ SR*u                      Confirmed    p=0.005        Confirmed (90%)          0.09
+  ✓ SR*Ta                     Confirmed    p=0.005        Confirmed (100%)         0.08
+  ✓ SR*HODsin                 Confirmed    p=0.005        Confirmed (95%)          0.07
+  ✓ dayhr                     Confirmed    p=0.005        Confirmed (90%)          0.05
+  ✓ WD                        Confirmed    p=0.005        Confirmed (100%)         0.04
+  ✓ h*v                       Confirmed    p=0.005        Confirmed (95%)          0.04
+  ✓ depth                     Supported    p=0.174        Confirmed (100%)         0.03
+  ✓ VPD*WS                    Confirmed    p=0.025        Confirmed (100%)         0.03
+  ✓ u*VPD                     Confirmed    p=0.050        Confirmed (95%)          0.03
+  ✓ h*cosTOD                  Supported    p=0.065        Confirmed (85%)          0.03
+  ✓ h*sinTOD                  Supported    p=0.139        Confirmed (85%)          0.02
+------------------------------------------------------------------------
+
+  → Carry the 15 important variables to the collinearity checker.
+========================================================================

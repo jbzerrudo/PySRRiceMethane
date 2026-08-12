@@ -1,0 +1,16 @@
+predictor,pimp_significant,pimp_p_value,boruta_important,boruta_decision,boruta_hit_rate,consensus,consensus_important,perm_importance
+Tv_K,True,0.004975124378109453,True,Confirmed,1.0,Confirmed,True,2.3131582970277442
+hbar_wet,True,0.004975124378109453,True,Confirmed,1.0,Confirmed,True,1.543590403429989
+h_inv,True,0.004975124378109453,True,Confirmed,1.0,Confirmed,True,0.17114900387164234
+SR*v,True,0.004975124378109453,True,Confirmed,1.0,Confirmed,True,0.1685369824907097
+SR*u,True,0.004975124378109453,True,Confirmed,0.9,Confirmed,True,0.0892398494910438
+SR*Ta,True,0.004975124378109453,True,Confirmed,1.0,Confirmed,True,0.07686613390857655
+SR*HODsin,True,0.004975124378109453,True,Confirmed,0.95,Confirmed,True,0.06510661296125164
+dayhr,True,0.004975124378109453,True,Confirmed,0.9,Confirmed,True,0.04670499381209137
+WD,True,0.004975124378109453,True,Confirmed,1.0,Confirmed,True,0.0398507349251096
+h*v,True,0.004975124378109453,True,Confirmed,0.95,Confirmed,True,0.03651680297987969
+depth,False,0.17412935323383086,True,Confirmed,1.0,Supported,True,0.03213481717911382
+VPD*WS,True,0.024875621890547265,True,Confirmed,1.0,Confirmed,True,0.02977879239504677
+u*VPD,True,0.04975124378109453,True,Confirmed,0.95,Confirmed,True,0.02715354781926127
+h*cosTOD,False,0.06467661691542288,True,Confirmed,0.85,Supported,True,0.0255967104891468
+h*sinTOD,False,0.13930348258706468,True,Confirmed,0.85,Supported,True,0.0155176171037672

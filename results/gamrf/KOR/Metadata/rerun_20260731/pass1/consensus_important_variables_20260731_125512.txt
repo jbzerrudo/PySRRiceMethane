@@ -1,0 +1,74 @@
+========================================================================
+  ENSEMBLE FEATURE SELECTION — IMPORTANT VARIABLES
+  Generated at: 2026-07-31 16:59:02
+  Method: Union of PIMP (Altmann et al., 2010) and Boruta
+          (Kursa & Rudnicki, 2010) per Saeys et al. (2008)
+========================================================================
+
+  Total predictors evaluated : 54
+  Confirmed (both methods)   : 3
+  Supported (one method)     : 31
+  Rejected  (neither)        : 20
+  Important set (union)      : 34
+
+------------------------------------------------------------------------
+  Predictor                 Consensus    PIMP           Boruta                PermImp
+------------------------------------------------------------------------
+  ✓ Tv_K                      Supported    p=0.189        Confirmed (20%)       3299.24
+  ✓ Tair                      Supported    p=0.254        Confirmed (20%)       2413.79
+  ✓ Tsoil                     Supported    p=0.080        Confirmed (20%)        331.28
+  ✓ es                        Supported    p=0.642        Confirmed (20%)        325.13
+  ✓ asinh_P_kPa               Supported    p=0.473        Confirmed (20%)        281.09
+  ✓ h*Pr                      Supported    p=0.005        Rejected (0%)          267.74
+  ✓ Patm                      Supported    p=0.488        Confirmed (20%)        265.76
+  ✓ depth                     Supported    p=0.005        Rejected (0%)          264.63
+  ✓ VPD                       Supported    p=0.701        Confirmed (39%)        183.01
+  ✓ buoy_TsTa                 Supported    p=0.080        Confirmed (20%)        173.73
+  ✓ q/rho                     Supported    p=0.856        Confirmed (20%)        128.80
+  ✓ rho_moist                 Supported    p=0.512        Confirmed (20%)         81.66
+  ✗ wmix                      Rejected     p=0.935        Rejected (0%)           62.22
+  ✗ q                         Rejected     p=0.985        Rejected (0%)           22.50
+  ✓ asinh_Ts                  Supported    p=0.159        Confirmed (20%)          8.28
+  ✓ SR                        Supported    p=0.005        Rejected (0%)            3.62
+  ✗ RH                        Rejected     p=0.572        Tentative (52%)          2.81
+  ✗ h_ASINH_cm                Rejected     p=0.184        Rejected (0%)            2.40
+  ✓ SR*Ts                     Supported    p=0.303        Confirmed (20%)          1.71
+  ✓ AUC_wet                   Confirmed    p=0.005        Confirmed (20%)          1.41
+  ✓ SR*Ta                     Supported    p=0.299        Confirmed (20%)          1.34
+  ✗ h*Ts                      Rejected     p=0.527        Rejected (0%)            0.46
+  ✓ SR*VPD                    Confirmed    p=0.040        Confirmed (20%)          0.44
+  ✓ h_inv                     Supported    p=0.020        Rejected (0%)            0.33
+  ✗ VPD*WS                    Rejected     p=0.353        Rejected (0%)            0.25
+  ✗ uzonal                    Rejected     p=0.085        Rejected (5%)            0.23
+  ✓ Tdew                      Supported    p=0.920        Confirmed (56%)          0.22
+  ✓ SR*v                      Confirmed    p=0.010        Confirmed (20%)          0.19
+  ✗ WS                        Rejected     p=0.657        Rejected (0%)            0.17
+  ✗ q*WS                      Rejected     p=0.219        Rejected (0%)            0.17
+  ✓ vmerid                    Supported    p=0.174        Confirmed (20%)          0.13
+  ✗ SRxWS                     Rejected     p=0.343        Rejected (3%)            0.10
+  ✗ h*WS                      Rejected     p=0.209        Rejected (0%)            0.10
+  ✗ asinh_WS                  Rejected     p=0.796        Rejected (0%)            0.08
+  ✗ h*Ta                      Rejected     p=0.826        Rejected (0%)            0.08
+  ✗ h*v                       Rejected     p=0.090        Rejected (0%)            0.07
+  ✓ h*sinTOD                  Supported    p=0.214        Confirmed (21%)          0.07
+  ✗ h*u                       Rejected     p=0.085        Rejected (0%)            0.05
+  ✗ asinh_SR                  Rejected     p=0.751        Rejected (0%)            0.05
+  ✓ WD                        Supported    p=0.129        Confirmed (20%)          0.05
+  ✓ h*cosTOD                  Supported    p=0.388        Confirmed (20%)          0.05
+  ✓ h*VPD                     Supported    p=0.264        Confirmed (20%)          0.05
+  ✓ dayhr                     Supported    p=0.338        Confirmed (20%)          0.05
+  ✗ rate*Ts                   Rejected     p=0.527        Rejected (0%)            0.04
+  ✓ SR*u                      Supported    p=0.413        Confirmed (20%)          0.04
+  ✓ u*VPD                     Supported    p=0.657        Confirmed (20%)          0.03
+  ✓ VPD*WS*d1sin              Supported    p=0.517        Confirmed (19%)          0.03
+  ✗ rate                      Rejected     p=0.517        Rejected (0%)            0.02
+  ✗ asinh_rate_h              Rejected     p=0.662        Rejected (0%)            0.01
+  ✓ v*VPD                     Supported    p=0.677        Confirmed (20%)          0.01
+  ✓ asinh_Ta                  Supported    p=0.945        Confirmed (20%)          0.01
+  ✓ SR*HODsin                 Supported    p=0.766        Confirmed (20%)          0.01
+  ✗ rate*Ta                   Rejected     p=0.871        Rejected (0%)            0.00
+  ✓ rate_P                    Supported    p=0.448        Confirmed (20%)          0.00
+------------------------------------------------------------------------
+
+  → Carry the 34 important variables to the collinearity checker.
+========================================================================

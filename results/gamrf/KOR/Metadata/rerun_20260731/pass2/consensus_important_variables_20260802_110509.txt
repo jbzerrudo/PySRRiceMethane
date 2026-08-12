@@ -1,0 +1,38 @@
+========================================================================
+  ENSEMBLE FEATURE SELECTION — IMPORTANT VARIABLES
+  Generated at: 2026-08-02 12:08:05
+  Method: Union of PIMP (Altmann et al., 2010) and Boruta
+          (Kursa & Rudnicki, 2010) per Saeys et al. (2008)
+========================================================================
+
+  Total predictors evaluated : 18
+  Confirmed (both methods)   : 8
+  Supported (one method)     : 8
+  Rejected  (neither)        : 2
+  Important set (union)      : 16
+
+------------------------------------------------------------------------
+  Predictor                 Consensus    PIMP           Boruta                PermImp
+------------------------------------------------------------------------
+  ✓ AUC_wet                   Confirmed    p=0.005        Confirmed (20%)          2.06
+  ✓ Tv_K                      Confirmed    p=0.005        Confirmed (20%)          1.75
+  ✓ SR                        Confirmed    p=0.020        Confirmed (20%)          0.16
+  ✗ h*Pr                      Rejected     p=0.214        Rejected (0%)            0.14
+  ✓ SR*v                      Confirmed    p=0.005        Confirmed (20%)          0.13
+  ✓ asinh_P_kPa               Confirmed    p=0.005        Confirmed (20%)          0.12
+  ✓ h_inv                     Supported    p=0.005        Rejected (0%)            0.12
+  ✓ h*sinTOD                  Supported    p=0.080        Confirmed (20%)          0.10
+  ✓ WD                        Confirmed    p=0.005        Confirmed (20%)          0.09
+  ✓ dayhr                     Supported    p=0.085        Confirmed (20%)          0.08
+  ✓ v*VPD                     Confirmed    p=0.035        Confirmed (20%)          0.06
+  ✓ SR*HODsin                 Supported    p=0.149        Confirmed (20%)          0.04
+  ✗ vmerid                    Rejected     p=0.104        Tentative (58%)          0.04
+  ✓ VPD*WS*d1sin              Supported    p=0.338        Confirmed (20%)          0.03
+  ✓ SR*u                      Confirmed    p=0.040        Confirmed (20%)          0.03
+  ✓ h*cosTOD                  Supported    p=0.413        Confirmed (20%)          0.02
+  ✓ u*VPD                     Supported    p=0.627        Confirmed (20%)          0.01
+  ✓ rate_P                    Supported    p=0.080        Confirmed (20%)          0.01
+------------------------------------------------------------------------
+
+  → Carry the 16 important variables to the collinearity checker.
+========================================================================

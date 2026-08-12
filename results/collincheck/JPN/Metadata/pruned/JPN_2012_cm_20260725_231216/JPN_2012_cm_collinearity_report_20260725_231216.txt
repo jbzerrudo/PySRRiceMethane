@@ -1,0 +1,89 @@
+========================================================================
+  COLLINEARITY ANALYSIS REPORT
+  Site            : JPN_2012_cm
+  Target variable : F_CH4_F
+  VIF threshold   : 5.0
+  Observations    : 6760
+  Initial features: 7
+  Retained        : 7
+  Dropped         : 0
+  Drop strategy   : Importance-guided (least important above VIF threshold)
+  Generated       : 2026-07-25 23:12:16
+========================================================================
+
+------------------------------------------------------------------------
+  INITIAL VIF SCORES (before elimination)
+------------------------------------------------------------------------
+  AUC_wet                         VIF =       3.31
+  h*Pr                            VIF =       3.21
+  VPD                             VIF =       2.51
+  buoy_TsTa                       VIF =       1.46
+  vmerid                          VIF =       1.42
+  uzonal                          VIF =       1.32
+  SR*HODsin                       VIF =       1.23
+
+------------------------------------------------------------------------
+  STEPWISE VIF ELIMINATION LOG
+------------------------------------------------------------------------
+
+  Iteration 1
+  Feature                                VIF
+  ------------------------------  ----------
+  AUC_wet                               3.31
+  h*Pr                                  3.21
+  VPD                                   2.51
+  buoy_TsTa                             1.46
+  vmerid                                1.42
+  uzonal                                1.32
+  SR*HODsin                             1.23
+
+  Action: None. All remaining VIFs <= 5.0.
+
+------------------------------------------------------------------------
+  DROPPED VARIABLES SUMMARY
+------------------------------------------------------------------------
+
+  No variables were dropped.
+
+------------------------------------------------------------------------
+  RETAINED VARIABLES SUMMARY
+------------------------------------------------------------------------
+
+  AUC_wet
+     Final VIF : 3.31
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  h*Pr
+     Final VIF : 3.21
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  VPD
+     Final VIF : 2.51
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  buoy_TsTa
+     Final VIF : 1.46
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  vmerid
+     Final VIF : 1.42
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  uzonal
+     Final VIF : 1.32
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+  SR*HODsin
+     Final VIF : 1.23
+     Verdict   : Retained. VIF <= 5.0; contributes unique variance
+                 not captured by other predictors.
+
+========================================================================
+  END OF REPORT
+========================================================================

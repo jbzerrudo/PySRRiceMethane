@@ -1,0 +1,11 @@
+predictor,pimp_significant,pimp_p_value,boruta_important,boruta_decision,boruta_hit_rate,consensus,consensus_important,perm_importance
+AUC_wet,True,0.004975124378109453,True,Confirmed,0.2,Confirmed,True,1.251625120773431
+Tv_K,True,0.004975124378109453,True,Confirmed,0.2,Confirmed,True,0.6119846529338915
+u*VPD,True,0.004975124378109453,True,Confirmed,0.55,Confirmed,True,0.2865920223709715
+uzonal,True,0.004975124378109453,False,Rejected,0.04,Supported,True,0.17620602958938925
+h*Pr,True,0.004975124378109453,True,Confirmed,0.2,Confirmed,True,0.053369322158471455
+WD,False,0.09950248756218906,True,Confirmed,0.22,Supported,True,0.03341604673777354
+SR*HODsin,True,0.009950248756218905,False,Rejected,0.0,Supported,True,0.02863506330459753
+VPD*WS,False,0.263681592039801,True,Confirmed,0.15,Supported,True,0.02007732585568167
+VPD*WS*d1sin,False,0.27860696517412936,False,Rejected,0.0,Rejected,False,0.010233423127754548
+vmerid,False,0.6616915422885572,False,Tentative,0.48,Rejected,False,0.0029112828801771684

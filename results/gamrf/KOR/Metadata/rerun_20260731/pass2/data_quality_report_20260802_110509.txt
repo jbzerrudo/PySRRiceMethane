@@ -1,0 +1,45 @@
+Data Quality Report for F_CH4_F
+Generated at: 2026-08-02 12:08:05
+======================================================================
+Rows total: 8,365
+Target non-NA: 8,365
+
+Predictor completeness:
+  dayhr               :    8365 (100.0%)
+  AUC_wet             :    8365 (100.0%)
+  SR                  :    8365 (100.0%)
+  WD                  :    8365 (100.0%)
+  rate_P              :    8364 (100.0%)
+  h*Pr                :    8365 (100.0%)
+  Tv_K                :    8365 (100.0%)
+  vmerid              :    8365 (100.0%)
+  SR*u                :    8365 (100.0%)
+  SR*v                :    8365 (100.0%)
+  h_inv               :    8365 (100.0%)
+  u*VPD               :    8365 (100.0%)
+  v*VPD               :    8365 (100.0%)
+  SR*HODsin           :    8365 (100.0%)
+  VPD*WS*d1sin        :    8365 (100.0%)
+  asinh_P_kPa         :    8365 (100.0%)
+  h*sinTOD            :    8365 (100.0%)
+  h*cosTOD            :    8365 (100.0%)
+
+Simple outlier counts (IQR rule):
+  dayhr               :       0
+  AUC_wet             :       0
+  SR                  :       0
+  WD                  :       0
+  rate_P              :     174
+  h*Pr                :      18
+  Tv_K                :      35
+  vmerid              :     193
+  SR*u                :    2395
+  SR*v                :    3256
+  h_inv               :       0
+  u*VPD               :    2391
+  v*VPD               :    2371
+  SR*HODsin           :    2883
+  VPD*WS*d1sin        :    1461
+  asinh_P_kPa         :      45
+  h*sinTOD            :    1225
+  h*cosTOD            :    1141
