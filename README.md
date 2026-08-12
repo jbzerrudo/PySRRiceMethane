@@ -27,6 +27,8 @@ The project is organized into the following directories:
 
 **`results/collincheck/`** — Collinearity screening outputs, including the per-predictor variance inflation factors used for the VIF ≤ 5 filter.
 
+**`results/vif10_companion/`** — Companion PySR runs at the more permissive VIF ≤ 10 threshold, for Mase and the pooled arm. These are the runs behind the choice of VIF ≤ 5 in §2.3 of the paper.
+
 **`results/pysr_runs/`** — Per-seed outputs: Pareto fronts, equation reports, and the cross-validation and coefficient-stability outputs (txt/csv) behind the selection rules.
 
 **`results/nnrf/`** — Random-forest and neural-network ceiling and residual benchmarks (Table 9).
