@@ -29,6 +29,8 @@ The project is organized into the following directories:
 
 **`results/vif10_companion/`** — Companion PySR runs at the more permissive VIF ≤ 10 threshold, for Mase and the pooled arm. These are the runs behind the choice of VIF ≤ 5 in §2.3 of the paper.
 
+**`results/ruleA_audit/`** — All 48 labelled candidates per arm (12 seeds x 4), each scored under day-grouped CV and the coefficient-stability screen: the selection-sensitivity audit behind Section 2.9.
+
 **`results/pysr_runs/`** — Per-seed outputs: Pareto fronts, equation reports, and the cross-validation and coefficient-stability outputs (txt/csv) behind the selection rules.
 
 **`results/nnrf/`** — Random-forest and neural-network ceiling and residual benchmarks (Table 9).
@@ -53,17 +55,19 @@ established across the twelve seeds, not by replaying one.
   from the FLUXNET-CH4 community product, CC-BY-4.0. Original records:
   Mase (JP-MSE) doi:10.18140/FLX/1669647, Cheorwon (SK-CRK)
   doi:10.18140/FLX/1669649. Cite the originals when using these tables.
-- **IRRI 2016 record and all tables derived from it (PHL, POOLED)**: the
-  authors' own measurements, available on reasonable request; not part of this
-  repository. Contact the corresponding author.
+- **IRRI 2016 raw eddy-covariance record**: the authors' own measurement,
+  available on reasonable request; not part of this repository. Contact the
+  corresponding author.
+- **Derived IRRI analysis tables (data/PHL, data/POOLED)**: included in this
+  repository with the co-authors' agreement, under CC-BY-4.0.
  - Water depth and depth-derived predictors are in cm; the paper's fitted coefficients assume this convention.
 
 ## Citation
 
 If you use this code or data, cite the paper and this repository. Full author list in CITATION.cff.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21893634.svg)](https://doi.org/10.5281/zenodo.21893634)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21893633.svg)](https://doi.org/10.5281/zenodo.21893633)
 
 > Zerrudo, J., et al. (2026). PySRRiceMethane: symbolic regression pipeline and results
-> for rice-paddy CH4 flux equations across three Asian sites (v1.0.0). Zenodo.
-> https://doi.org/10.5281/zenodo.21893634
+> for rice-paddy CH4 flux equations across three Asian sites. Zenodo.
+> https://doi.org/10.5281/zenodo.21893633

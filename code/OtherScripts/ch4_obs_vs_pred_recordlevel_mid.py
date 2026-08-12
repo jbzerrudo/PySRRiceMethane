@@ -73,6 +73,9 @@ def predict_kor(df):
     return np.exp(0.106 * (Tair - 0.000744 * SRv)) \
            + (Tair + 3.80) * dayhr * (-0.00771) - hVPD / 0.277
 
+# Prose site names for panel titles; archive codes stay as internal keys.
+PROSE_NAMES = {"PH-IR": "IRRI", "SK-CRK": "Cheorwon", "JP-MSE": "Mase"}
+
 SITES = {
     "PH-IR":  dict(fn=predict_phl, cols=["SRTs", "AUC", "SRHODsin"],     color="#1b7837", dayfirst=True),
     "SK-CRK": dict(fn=predict_kor, cols=["Tair", "SRv", "dayhr", "hVPD"], color="#762a83", dayfirst=False),
@@ -118,7 +121,7 @@ for ax, (site, cfg) in zip(axes, SITES.items()):
         ax.plot(df.index, pd.Series(pred, index=df.index).rolling(ROLL).mean(),
                 lw=1.8, color=cfg["color"], label=f"Predicted ({ROLL} mean)")
 
-    ax.set_title(f"{site} - record-level Mid form", loc="left", fontweight="bold")
+    ax.set_title(f"{PROSE_NAMES.get(site, site)} - record-level Mid form", loc="left", fontweight="bold")
     ax.set_ylabel(r"CH$_4$ flux (mg m$^{-2}$ h$^{-1}$)")
     ax.text(0.99, 0.95, f"$R^2$={r2:.3f}   RMSE={rmse:.2f}   MAE={mae:.2f}   (n={n})",
             transform=ax.transAxes, ha="right", va="top", fontsize=9,
