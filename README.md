@@ -15,18 +15,27 @@ criteria declared in advance, day-grouped cross-validation with a
 coefficient-stability screen, RF/NN benchmarks, Sobol sensitivity, and
 leave-one-site-out validation of the pooled equation.
 
-## Layout
+## Full Repository Layout
 
-    code/               the pipeline as run, numbered 0..11
-                        (feature selection, VIF, Celsius conversion, PySR,
-                        recurrence, LOSO, RF/NN benchmark, Sobol, figures)
-    data/               derived analysis tables for Mase and Cheorwon
-    results/pysr_runs/  per-seed Pareto fronts, equation reports, stage-8
-                        CV and coefficient-stability outputs (txt/csv)
-    results/nnrf/       RF and NN ceiling and residual benchmarks
-    results/sobol/      variance-based sensitivity results
-    results/loso/       leave-one-site-out validation of the pooled equation
-    figures/            the paper's generated figures
+The project is organized into the following directories:
+
+**`code/`** — The complete processing pipeline, numbered 0 through 11: feature selection, VIF filtering, Celsius conversion, PySR search, form recurrence, LOSO, RF/NN benchmark, Sobol sensitivity, and figures. Also contains the site-specific flux quality-control scripts (`clean_KORCRK_flux_papale_hampel.py`, `clean_PHL_flux_light.py`) described in §2.1 of the paper.
+
+**`data/`** — Derived analysis tables for all three sites (Mase, Cheorwon, IRRI) and the pooled arm. The IRRI tables are published with the co-authors' agreement.
+
+**`results/gamrf/`** — GAM–random-forest union outputs of the feature-selection cascade, including the per-predictor permutation importances behind Table 3 and Table 4.
+
+**`results/collincheck/`** — Collinearity screening outputs, including the per-predictor variance inflation factors used for the VIF ≤ 5 filter.
+
+**`results/pysr_runs/`** — Per-seed outputs: Pareto fronts, equation reports, and the cross-validation and coefficient-stability outputs (txt/csv) behind the selection rules.
+
+**`results/nnrf/`** — Random-forest and neural-network ceiling and residual benchmarks (Table 9).
+
+**`results/sobol/`** — Variance-based sensitivity analysis results (Table 10).
+
+**`results/loso/`** — Leave-one-site-out validation outcomes for the pooled equation (Table 8).
+
+**`figures/`** — Generated figures for the paper.
 
 ## Reproducing
 
@@ -43,7 +52,7 @@ established across the twelve seeds, not by replaying one.
   Mase (JP-MSE) doi:10.18140/FLX/1669647, Cheorwon (SK-CRK)
   doi:10.18140/FLX/1669649. Cite the originals when using these tables.
 - **IRRI 2016 record and all tables derived from it (PHL, POOLED)**: the
-  authors' own measurement, available on reasonable request; not part of this
+  authors' own measurements, available on reasonable request; not part of this
   repository. Contact the corresponding author.
  - Water depth and depth-derived predictors are in cm; the paper's fitted coefficients assume this convention.
 
